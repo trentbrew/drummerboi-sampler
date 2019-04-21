@@ -6,7 +6,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: white;
+  background-color: gray;
 }
 
 .app {
@@ -19,13 +19,15 @@ body {
 }
 
 header h1 {
-  margin: 50px 0px 30px 0px;
+  margin: 150px 0px 30px 0px;
   text-align: center;
-  font-size: 40px;
+  font-size: 46px;
+  color: white;
 }
 
 header p {
   font-size: 20px;
+  color: white;
 }
 
 .pads {
