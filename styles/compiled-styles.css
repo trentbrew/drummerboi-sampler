@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Montserrat", sans-serif; }
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+
+header h1 {
+  margin: 50px 0px 30px 0px;
+  text-align: center;
+  font-size: 40px; }
+
+header p {
+  font-size: 20px; }
+
+.pads {
+  width: 100%;
+  display: flex;
+  border-radius: 200px 200px 0px 0px; }
+
+.pads > div {
+  height: 100px;
+  width: 100px;
+  flex: 1;
+  transition: 300ms; }
+  .pads > div:hover {
+    opacity: 0.5;
+    cursor: pointer; }
+
+.pad1 {
+  background: #CE93D8;
+  border-radius: 200px 0px 0px 0px; }
+
+.pad2 {
+  background: #e57373; }
+
+.pad3 {
+  background: #66BB6A; }
+
+.pad4 {
+  background: #FFEB3B; }
+
+.pad5 {
+  background: #1E88E5; }
+
+.pad6 {
+  background: #00BCD4;
+  border-radius: 0px 200px 0px 0px; }
+
+/*# sourceMappingURL=compiled-styles.css.map */
