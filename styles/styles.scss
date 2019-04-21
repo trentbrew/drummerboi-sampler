@@ -35,7 +35,7 @@ header p {
 }
 
 .pads > div {
-  height: 250px;
+  height: 50vh;
   width: 100px;
   flex: 1;
   transition: 300ms;
@@ -81,11 +81,17 @@ header p {
   height: 180px;
 }
 
+.wave-divider {
+  background-color: white;
+  width: 100%;
+  height: 100px;
+}
+
 .wave {
   position: absolute;
   width: 100%;
   height: 140px;
-  bottom: 120px;
+  top: 50%;
   background: url("../res/wave.svg");
   animation: wave 8s linear infinite;
   transform: rotate(180deg);
