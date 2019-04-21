@@ -34,7 +34,7 @@ header p {
 }
 
 .pads > div {
-  height: 150px;
+  height: 250px;
   width: 100px;
   flex: 1;
   transition: 300ms;
@@ -47,7 +47,7 @@ header p {
 
 .pad1 {
   background: #CE93D8;
-  border-radius: 200px 0px 0px 0px;
+  //border-radius: 200px 0px 0px 0px;
 }
 
 .pad2 {
@@ -68,5 +68,34 @@ header p {
 
 .pad6 {
   background: #00BCD4;
-  border-radius: 0px 200px 0px 0px;
+  //border-radius: 0px 200px 0px 0px;
+}
+
+#visual {
+  background-image: url("../res/pose1.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 180px;
+  height: 180px;
+}
+
+.wave {
+  position: absolute;
+  width: 100%;
+  height: 140px;
+  bottom: 120px;
+  background: url("../res/wave.svg");
+  animation: wave 8s linear infinite;
+  transform: rotate(180deg);
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0px 0px;
+  }
+
+  100% {
+    background-position: -1600px 0px;
+  }
 }
