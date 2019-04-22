@@ -19,7 +19,7 @@ body {
 }
 
 header {
-  margin-top: 80px;
+  margin-top: 110px;
 }
 
 header h1 {
@@ -116,7 +116,7 @@ header p {
 
 .menu-container {
   position: absolute;
-  padding: 20px;
+  padding: 40px;
 
   ul {
     list-style: none;
@@ -165,5 +165,9 @@ header p {
   #visual {
     width: 90px;
     height: 90px;
+  }
+
+  .menu-container {
+    padding: 20px;
   }
 }
