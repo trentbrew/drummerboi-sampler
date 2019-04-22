@@ -9,14 +9,17 @@ body {
 
 .app {
   height: 100vh;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-align: center; }
 
 header {
-  margin-top: 110px; }
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 140px; }
 
 header h1 {
   margin: 0px 0px 30px 0px;
@@ -31,13 +34,18 @@ header p {
   margin-top: -25px; }
 
 .pads {
+  position: absolute;
   width: 100%;
-  display: flex;
-  border-radius: 200px 200px 0px 0px; }
+  margin: auto;
+  left: 0;
+  right: 0;
+  display: grid;
+  border-radius: 200px 200px 0px 0px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  bottom: 0px; }
 
 .pads > div {
   height: 50vh;
-  width: 100px;
   flex: 1;
   transition: 300ms; }
   .pads > div:hover {
@@ -88,20 +96,195 @@ header p {
     background-position: -1600px 0px; } }
 .menu-container {
   position: absolute;
-  padding: 40px; }
+  padding: 40px;
+  z-index: 10; }
   .menu-container ul {
     list-style: none; }
   .menu-container li:nth-child(1) {
     font-weight: bolder;
-    font-size: 28px; }
+    font-size: 28px;
+    opacity: 0.5; }
   .menu-container li {
     margin-bottom: 10px;
     transition: 300ms;
-    opacity: 0.8; }
+    opacity: 0.5; }
     .menu-container li:hover {
       cursor: pointer;
-      opacity: 0.5; }
+      opacity: 1; }
 
+/* falling notes animation */
+#leaves {
+  position: relative;
+  top: -100px;
+  width: 100%;
+  text-align: left; }
+
+#leaves i {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+  -webkit-animation: falling 5s 0s infinite; }
+
+#leaves i:nth-of-type(2n) {
+  -webkit-animation: falling2 5s 0s infinite; }
+
+#leaves i:nth-of-type(3n) {
+  -webkit-animation: falling3 5s 0s infinite; }
+
+#leaves i:nth-of-type(n) {
+  height: 23px;
+  width: 30px; }
+
+#leaves i:nth-of-type(n):before {
+  width: 7px;
+  height: 5px;
+  top: 17px;
+  right: 1px; }
+
+#leaves i:nth-of-type(n):after {
+  width: 2px;
+  height: 17px;
+  left: 12px;
+  top: 0px; }
+
+#leaves i:nth-of-type(2n+1) {
+  height: 40px;
+  width: 40px; }
+
+#leaves i:nth-of-type(2n+1):before {
+  width: 20px;
+  height: 20px;
+  top: 7px;
+  left: 0px; }
+
+#leaves i:nth-of-type(2n+1):after {
+  width: 2px;
+  height: 6px;
+  right: 5px;
+  top: 1px; }
+
+#leaves i:nth-of-type(3n+2) {
+  height: 17px;
+  width: 23px; }
+
+#leaves i:nth-of-type(3n+2):before {
+  height: 4px;
+  width: 4px;
+  top: 12px;
+  left: 1px; }
+
+#leaves i:nth-of-type(3n+2):after {
+  height: 10px;
+  width: 2px;
+  top: 1px;
+  right: 8px; }
+
+#leaves i:nth-of-type(n) {
+  -webkit-animation-delay: 1.9s; }
+
+#leaves i:nth-of-type(2n) {
+  -webkit-animation-delay: 3.9s; }
+
+#leaves i:nth-of-type(3n) {
+  -webkit-animation-delay: 2.3s; }
+
+#leaves i:nth-of-type(4n) {
+  -webkit-animation-delay: 4.4s; }
+
+#leaves i:nth-of-type(5n) {
+  -webkit-animation-delay: 5s; }
+
+#leaves i:nth-of-type(6n) {
+  -webkit-animation-delay: 3.5s; }
+
+#leaves i:nth-of-type(7n) {
+  -webkit-animation-delay: 2.8s; }
+
+#leaves i:nth-of-type(8n) {
+  -webkit-animation-delay: 1.5s; }
+
+#leaves i:nth-of-type(9n) {
+  -webkit-animation-delay: 3.3s; }
+
+#leaves i:nth-of-type(10n) {
+  -webkit-animation-delay: 2.5s; }
+
+#leaves i:nth-of-type(11n) {
+  -webkit-animation-delay: 1.2s; }
+
+#leaves i:nth-of-type(12n) {
+  -webkit-animation-delay: 4.1s; }
+
+#leaves i:nth-of-type(13n) {
+  -webkit-animation-delay: 1s; }
+
+#leaves i:nth-of-type(14n) {
+  -webkit-animation-delay: 4.7s; }
+
+#leaves i:nth-of-type(15n) {
+  -webkit-animation-delay: 3s; }
+
+#leaves i:nth-of-type(n) {
+  background-image: url("../res/music-icon1.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: invert(0); }
+
+#leaves i:nth-of-type(2n+2) {
+  background-image: url("../res/music-icon2.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: invert(0); }
+
+#leaves i:nth-of-type(4n+1) {
+  background-image: url("../res/music-icon2.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: invert(0); }
+
+#leaves i:nth-of-type(n) {
+  opacity: .7; }
+
+#leaves i:nth-of-type(3n+1) {
+  opacity: .5; }
+
+#leaves i:nth-of-type(3n+2) {
+  opacity: .3; }
+
+#leaves i:nth-of-type(n) {
+  transform: rotate(180deg); }
+
+#leaves i:nth-of-type(n) {
+  -webkit-animation-timing-function: ease-in-out; }
+
+@-webkit-keyframes falling {
+  0% {
+    -webkit-transform: translate3d(300, 0, 0) rotate(0deg); }
+  50% {
+    opacity: 0; }
+  100% {
+    -webkit-transform: translate3d(350px, 750px, 0) rotate(90deg);
+    opacity: 0; } }
+@-webkit-keyframes falling3 {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(-20deg); }
+  50% {
+    opacity: 0; }
+  100% {
+    -webkit-transform: translate3d(230px, 770px, 0) rotate(-70deg);
+    opacity: 0; } }
+@-webkit-keyframes falling2 {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(90deg); }
+  50% {
+    opacity: 0; }
+  100% {
+    -webkit-transform: translate3d(400px, 790px, 0) rotate(0deg);
+    opacity: 0; } }
 @media only screen and (max-width: 769px) {
   .pads {
     height: 40vh; }
@@ -110,19 +293,19 @@ header p {
     top: calc(60% - 10px); }
 
   header {
-    margin-top: 200px; }
+    top: 35%; }
 
   header h1 {
     margin-top: 60px;
-    font-size: 32px;
+    font-size: 28px;
     margin-top: 0px; }
 
   header p {
-    font-size: 16px; }
+    font-size: 14px; }
 
   #visual {
-    width: 90px;
-    height: 90px; }
+    width: 70px;
+    height: 70px; }
 
   .menu-container {
     padding: 20px; } }
