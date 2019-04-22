@@ -90,8 +90,7 @@ header p {
     list-style: none; }
   .menu-container li:nth-child(1) {
     font-weight: bolder;
-    font-size: 28px;
-    color: #ef9a9a; }
+    font-size: 28px; }
   .menu-container li {
     margin-bottom: 10px;
     transition: 300ms; }

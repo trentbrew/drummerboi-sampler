@@ -27,30 +27,72 @@ window.addEventListener("load", () => {
       if(option.innerHTML == "Standard") {
         option.style.color = "#ef9a9a";
         soundPackx = soundPack1;
+        pads[0].style.backgroundColor = "#e57373";
+        pads[1].style.backgroundColor = "#FFA726";
+        pads[2].style.backgroundColor = "#FFEB3B";
+        pads[3].style.backgroundColor = "#66BB6A";
+        pads[4].style.backgroundColor = "#1E88E5";
+        pads[5].style.backgroundColor = "#CE93D8";
       }
       else if(option.innerHTML == "Techno") {
         option.style.color = "#7CB342";
         soundPackx = soundPack2;
+        pads[0].style.backgroundColor = "#d658ab";
+        pads[1].style.backgroundColor = "#963b74";
+        pads[2].style.backgroundColor = "#232227";
+        pads[3].style.backgroundColor = "#326c71";
+        pads[4].style.backgroundColor = "#6dc1bb";
+        pads[5].style.backgroundColor = "#a2dfd6";
       }
       else if(option.innerHTML == "Pop") {
         option.style.color = "#F48FB1";
         soundPackx = soundPack3;
+        pads[0].style.backgroundColor = "#b6ceec";
+        pads[1].style.backgroundColor = "#eebfd3";
+        pads[2].style.backgroundColor = "#e47da2";
+        pads[3].style.backgroundColor = "#f1a8b4";
+        pads[4].style.backgroundColor = "#f5c3c0";
+        pads[5].style.backgroundColor = "#f2ebd8";
       }
       else if(option.innerHTML == "Funky") {
         option.style.color = "#FBC02D";
         soundPackx = soundPack4;
+        pads[0].style.backgroundColor = "#9aafc5";
+        pads[1].style.backgroundColor = "#5ec2c7";
+        pads[2].style.backgroundColor = "#ab567f";
+        pads[3].style.backgroundColor = "#882d4a";
+        pads[4].style.backgroundColor = "#c8bf62";
+        pads[5].style.backgroundColor = "#d0dcde";
       }
       else if(option.innerHTML == "Island") {
         option.style.color = "#4DB6AC";
         soundPackx = soundPack5;
+        pads[0].style.backgroundColor = "#5c6d42";
+        pads[1].style.backgroundColor = "#da7a29";
+        pads[2].style.backgroundColor = "#e5b325";
+        pads[3].style.backgroundColor = "#ca9024";
+        pads[4].style.backgroundColor = "#357b89";
+        pads[5].style.backgroundColor = "#1b4e66";
       }
       else if(option.innerHTML == "Lo-Fi") {
         option.style.color = "#1E88E5";
         soundPackx = soundPack6;
+        pads[0].style.backgroundColor = "#ebb8a7";
+        pads[1].style.backgroundColor = "#ee9b80";
+        pads[2].style.backgroundColor = "#d48874";
+        pads[3].style.backgroundColor = "#368196";
+        pads[4].style.backgroundColor = "#205973";
+        pads[5].style.backgroundColor = "#0f3441";
       }
       else {
         option.style.color = "#7E57C2";
         soundPackx = soundPack7;
+        pads[0].style.backgroundColor = "#c9a7d7";
+        pads[1].style.backgroundColor = "#cab8d9";
+        pads[2].style.backgroundColor = "#cacad9";
+        pads[3].style.backgroundColor = "#c9dadb";
+        pads[4].style.backgroundColor = "#caeada";
+        pads[5].style.backgroundColor = "#caf7dc";
       }
 
       console.log("clicked " + option.innerHTML);
@@ -58,7 +100,7 @@ window.addEventListener("load", () => {
       options.forEach((index, i) => {
         index.style.fontSize = "18px";
         index.style.fontWeight = "normal";
-        //index.style.color = "black";
+        index.style.color = "black";
       });
 
       option.style.fontSize = "28px";
