@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
   const image = document.getElementById("visual");
   var rand = 0;
   var currentImg = 0;
-  var soundPackx;
+  var soundPackx = soundPack1;
 
   var img = [
     "url('res/pose1.png')",
