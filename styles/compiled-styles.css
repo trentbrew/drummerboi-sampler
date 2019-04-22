@@ -25,7 +25,8 @@ header h1 {
 header p {
   font-size: 20px;
   color: black;
-  opacity: 0.6; }
+  margin-top: -20px;
+  opacity: 0.4; }
 
 .pads {
   width: 100%;
@@ -82,5 +83,20 @@ header p {
     background-position: 0px 0px; }
   100% {
     background-position: -1600px 0px; } }
+.menu-container {
+  position: absolute;
+  padding: 20px; }
+  .menu-container ul {
+    list-style: none; }
+  .menu-container li:nth-child(1) {
+    font-weight: bolder;
+    font-size: 28px;
+    color: #ef9a9a; }
+  .menu-container li {
+    margin-bottom: 10px;
+    transition: 300ms; }
+    .menu-container li:hover {
+      cursor: pointer;
+      opacity: 0.5; }
 
 /*# sourceMappingURL=compiled-styles.css.map */

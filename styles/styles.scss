@@ -29,7 +29,8 @@ header h1 {
 header p {
   font-size: 20px;
   color: black;
-  opacity: 0.6;
+  margin-top: -20px;
+  opacity: 0.4;
 }
 
 .pads {
@@ -105,5 +106,30 @@ header p {
 
   100% {
     background-position: -1600px 0px;
+  }
+}
+
+.menu-container {
+  position: absolute;
+  padding: 20px;
+
+  ul {
+    list-style: none;
+  }
+
+  li:nth-child(1) {
+    font-weight: bolder;
+    font-size: 28px;
+    color: #ef9a9a;
+  }
+
+  li {
+    margin-bottom: 10px;
+    transition: 300ms;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
   }
 }
