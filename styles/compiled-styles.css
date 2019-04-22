@@ -16,10 +16,11 @@ body {
   text-align: center; }
 
 header h1 {
-  margin: 150px 0px 30px 0px;
+  margin: 0px 0px 30px 0px;
   text-align: center;
-  font-size: 46px;
-  color: black; }
+  font-size: 42px;
+  color: black;
+  margin-top: -20px; }
 
 header p {
   font-size: 20px;
@@ -47,30 +48,31 @@ header p {
   background: #e57373; }
 
 .pad3 {
-  background: #66BB6A; }
+  background: #FF8A65; }
 
 .pad4 {
   background: #FFEB3B; }
 
 .pad5 {
-  background: #1E88E5; }
+  background: #66BB6A; }
 
 .pad6 {
-  background: #00BCD4; }
+  background: #1E88E5; }
 
 #visual {
   background-image: url("../res/pose1.png");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 180px;
-  height: 180px; }
+  width: 120px;
+  height: 120px;
+  margin-top: 50px; }
 
 .wave {
   position: absolute;
   width: 100%;
   height: 140px;
-  top: 50%;
+  top: calc(50% - 10px);
   background: url("../res/wave.svg");
   animation: wave 8s linear infinite;
   transform: rotate(180deg); }
