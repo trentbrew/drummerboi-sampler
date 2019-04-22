@@ -42,22 +42,22 @@ header p {
     cursor: pointer; }
 
 .pad1 {
-  background: #CE93D8; }
-
-.pad2 {
   background: #e57373; }
 
-.pad3 {
-  background: #FF8A65; }
+.pad2 {
+  background: #FFA726; }
 
-.pad4 {
+.pad3 {
   background: #FFEB3B; }
 
-.pad5 {
+.pad4 {
   background: #66BB6A; }
 
-.pad6 {
+.pad5 {
   background: #1E88E5; }
+
+.pad6 {
+  background: #CE93D8; }
 
 #visual {
   background-image: url("../res/pose1.png");
