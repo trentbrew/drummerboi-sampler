@@ -101,7 +101,7 @@ window.addEventListener("load", () => {
         index.style.fontSize = "18px";
         index.style.fontWeight = "normal";
         index.style.color = "black";
-        index.style.opacity = "0.5";
+        //index.style.opacity = "0.5";
       });
 
       option.style.fontSize = "28px";

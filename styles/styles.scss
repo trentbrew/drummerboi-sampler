@@ -54,8 +54,7 @@ header p {
 
 .pads > div {
   height: 50vh;
-  flex: 1;
-  transition: 300ms;
+  transition: 600ms;
 
   &:hover {
     opacity: 0.5;
@@ -135,14 +134,14 @@ header p {
   li:nth-child(1) {
     font-weight: bolder;
     font-size: 28px;
-    opacity: 0.5;
+    //opacity: 0.5;
     //color: #ef9a9a;
   }
 
   li {
     margin-bottom: 10px;
     transition: 300ms;
-    opacity: 0.5;
+    //opacity: 0.5;
 
     &:hover {
       cursor: pointer;
@@ -152,6 +151,7 @@ header p {
 }
 
 /* falling notes animation */
+
 #leaves {
   position: relative;
   top: -100px;
@@ -248,7 +248,7 @@ header p {
 
   100% {
     -webkit-transform:
-    translate3d(350px,750px,0)
+    translate3d(350px,100vh,0)
     rotate(90deg);
     opacity: 0;
   }
@@ -267,7 +267,7 @@ header p {
 
   100% {
     -webkit-transform:
-    translate3d(230px,770px,0)
+    translate3d(230px,100vh,0)
     rotate(-70deg);
     opacity: 0;
   }
@@ -286,7 +286,7 @@ header p {
 
   100% {
     -webkit-transform:
-    translate3d(400px,790px,0)
+    translate3d(400px,100vh,0)
     rotate(0deg);
     opacity: 0;
   }

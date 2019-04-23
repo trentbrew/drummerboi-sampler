@@ -46,8 +46,7 @@ header p {
 
 .pads > div {
   height: 50vh;
-  flex: 1;
-  transition: 300ms; }
+  transition: 600ms; }
   .pads > div:hover {
     opacity: 0.5;
     cursor: pointer; }
@@ -102,12 +101,10 @@ header p {
     list-style: none; }
   .menu-container li:nth-child(1) {
     font-weight: bolder;
-    font-size: 28px;
-    opacity: 0.5; }
+    font-size: 28px; }
   .menu-container li {
     margin-bottom: 10px;
-    transition: 300ms;
-    opacity: 0.5; }
+    transition: 300ms; }
     .menu-container li:hover {
       cursor: pointer;
       opacity: 1; }
@@ -267,7 +264,7 @@ header p {
   50% {
     opacity: 0; }
   100% {
-    -webkit-transform: translate3d(350px, 750px, 0) rotate(90deg);
+    -webkit-transform: translate3d(350px, 100vh, 0) rotate(90deg);
     opacity: 0; } }
 @-webkit-keyframes falling3 {
   0% {
@@ -275,7 +272,7 @@ header p {
   50% {
     opacity: 0; }
   100% {
-    -webkit-transform: translate3d(230px, 770px, 0) rotate(-70deg);
+    -webkit-transform: translate3d(230px, 100vh, 0) rotate(-70deg);
     opacity: 0; } }
 @-webkit-keyframes falling2 {
   0% {
@@ -283,7 +280,7 @@ header p {
   50% {
     opacity: 0; }
   100% {
-    -webkit-transform: translate3d(400px, 790px, 0) rotate(0deg);
+    -webkit-transform: translate3d(400px, 100vh, 0) rotate(0deg);
     opacity: 0; } }
 @media only screen and (max-width: 769px) {
   .pads {
