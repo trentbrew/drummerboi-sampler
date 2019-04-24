@@ -152,58 +152,59 @@ header p {
 
 /* falling notes animation */
 
-#leaves {
-  position: relative;
+#notes {
+  position: absolute;
   top: -100px;
   width: 100%;
   text-align: left;
 }
 
-#leaves i {
+#notes i {
     display: inline-block;
     width: 200px;
     height: 200px;
     z-index: 1;
-    -webkit-animation: falling 5s 0s infinite;
+    -webkit-animation: falling 7s 0s infinite;
+    margin-left: 10%;
 }
 
-#leaves i:nth-of-type(2n) {
-  -webkit-animation: falling2 5s 0s infinite;
+#notes i:nth-of-type(2n) {
+  -webkit-animation: falling2 7s 0s infinite;
 }
 
-#leaves i:nth-of-type(3n) {
-  -webkit-animation: falling3 5s 0s infinite;
+#notes i:nth-of-type(3n) {
+  -webkit-animation: falling3 7s 0s infinite;
 }
 
-#leaves i:nth-of-type(n) { height:23px; width:30px; }
-#leaves i:nth-of-type(n):before { width:7px; height:5px; top:17px; right:1px; }
-#leaves i:nth-of-type(n):after { width:2px; height:17px; left: 12px; top:0px; }
+#notes i:nth-of-type(n) { height:23px; width:30px; }
+#notes i:nth-of-type(n):before { width:7px; height:5px; top:17px; right:1px; }
+#notes i:nth-of-type(n):after { width:2px; height:17px; left: 12px; top:0px; }
 
-#leaves i:nth-of-type(2n+1)    { height:40px; width:40px; }
-#leaves i:nth-of-type(2n+1):before { width:20px; height:20px; top:7px; left:0px; }
-#leaves i:nth-of-type(2n+1):after { width:2px; height:6px; right: 5px; top:1px; }
+#notes i:nth-of-type(2n+1)    { height:40px; width:40px; }
+#notes i:nth-of-type(2n+1):before { width:20px; height:20px; top:7px; left:0px; }
+#notes i:nth-of-type(2n+1):after { width:2px; height:6px; right: 5px; top:1px; }
 
-#leaves i:nth-of-type(3n+2)  { height:17px; width:23px; }
-#leaves i:nth-of-type(3n+2):before  { height:4px; width:4px; top:12px; left:1px; }
-#leaves i:nth-of-type(3n+2):after  { height:10px; width:2px; top:1px; right:8px; }
+#notes i:nth-of-type(3n+2)  { height:17px; width:23px; }
+#notes i:nth-of-type(3n+2):before  { height:4px; width:4px; top:12px; left:1px; }
+#notes i:nth-of-type(3n+2):after  { height:10px; width:2px; top:1px; right:8px; }
 
-#leaves i:nth-of-type(n)   { -webkit-animation-delay: 1.9s;}
-#leaves i:nth-of-type(2n)  { -webkit-animation-delay: 3.9s;}
-#leaves i:nth-of-type(3n)  { -webkit-animation-delay: 2.3s;}
-#leaves i:nth-of-type(4n)  { -webkit-animation-delay: 4.4s;}
-#leaves i:nth-of-type(5n)  { -webkit-animation-delay: 5s;  }
-#leaves i:nth-of-type(6n)  { -webkit-animation-delay: 3.5s;}
-#leaves i:nth-of-type(7n)  { -webkit-animation-delay: 2.8s;}
-#leaves i:nth-of-type(8n)  { -webkit-animation-delay: 1.5s;}
-#leaves i:nth-of-type(9n)  { -webkit-animation-delay: 3.3s;}
-#leaves i:nth-of-type(10n) { -webkit-animation-delay: 2.5s;}
-#leaves i:nth-of-type(11n) { -webkit-animation-delay: 1.2s;}
-#leaves i:nth-of-type(12n) { -webkit-animation-delay: 4.1s;}
-#leaves i:nth-of-type(13n) { -webkit-animation-delay: 1s;  }
-#leaves i:nth-of-type(14n) { -webkit-animation-delay: 4.7s;}
-#leaves i:nth-of-type(15n) { -webkit-animation-delay: 3s;  }
+#notes i:nth-of-type(n)   { -webkit-animation-delay: 1.9s;}
+#notes i:nth-of-type(2n)  { -webkit-animation-delay: 3.9s;}
+#notes i:nth-of-type(3n)  { -webkit-animation-delay: 2.3s;}
+#notes i:nth-of-type(4n)  { -webkit-animation-delay: 4.4s;}
+#notes i:nth-of-type(5n)  { -webkit-animation-delay: 5s;  }
+#notes i:nth-of-type(6n)  { -webkit-animation-delay: 3.5s;}
+#notes i:nth-of-type(7n)  { -webkit-animation-delay: 2.8s;}
+#notes i:nth-of-type(8n)  { -webkit-animation-delay: 1.5s;}
+#notes i:nth-of-type(9n)  { -webkit-animation-delay: 3.3s;}
+#notes i:nth-of-type(10n) { -webkit-animation-delay: 2.5s;}
+#notes i:nth-of-type(11n) { -webkit-animation-delay: 1.2s;}
+#notes i:nth-of-type(12n) { -webkit-animation-delay: 4.1s;}
+#notes i:nth-of-type(13n) { -webkit-animation-delay: 1s;  }
+#notes i:nth-of-type(14n) { -webkit-animation-delay: 4.7s;}
+#notes i:nth-of-type(15n) { -webkit-animation-delay: 3s;  }
 
-#leaves i:nth-of-type(n) {
+#notes i:nth-of-type(n) {
   background-image: url("../res/music-icon1.png");
   background-position: center;
   background-size: contain;
@@ -211,7 +212,7 @@ header p {
   filter: invert(0);
 }
 
-#leaves i:nth-of-type(2n+2) {
+#notes i:nth-of-type(2n+2) {
   background-image: url("../res/music-icon2.png");
   background-position: center;
   background-size: contain;
@@ -219,7 +220,7 @@ header p {
   filter: invert(0);
 }
 
-#leaves i:nth-of-type(4n+1) {
+#notes i:nth-of-type(4n+1) {
   background-image: url("../res/music-icon2.png");
   background-position: center;
   background-size: contain;
@@ -227,13 +228,13 @@ header p {
   filter: invert(0);
 }
 
-#leaves i:nth-of-type(n) { opacity: .7;}
-#leaves i:nth-of-type(3n+1) { opacity: .5;}
-#leaves i:nth-of-type(3n+2) { opacity: .3;}
+#notes i:nth-of-type(n) { opacity: .3;}
+#notes i:nth-of-type(3n+1) { opacity: .5;}
+#notes i:nth-of-type(3n+2) { opacity: .3;}
 
-#leaves i:nth-of-type(n) {transform: rotate(180deg);}
+#notes i:nth-of-type(n) {transform: rotate(180deg);}
 
-#leaves i:nth-of-type(n) {-webkit-animation-timing-function:ease-in-out;}
+#notes i:nth-of-type(n) {-webkit-animation-timing-function:ease-in-out;}
 
 @-webkit-keyframes falling {
   0% {
@@ -242,7 +243,7 @@ header p {
     rotate(0deg);
   }
 
-  50% {
+  60% {
     opacity: 0;
   }
 
@@ -261,7 +262,7 @@ header p {
     rotate(-20deg);
   }
 
-  50% {
+  60% {
     opacity: 0;
   }
 
@@ -280,7 +281,7 @@ header p {
     rotate(90deg);
   }
 
-  50% {
+  60% {
     opacity: 0;
   }
 
@@ -292,9 +293,13 @@ header p {
   }
 }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 768px) {
   .pads {
-    height: 40vh;
+    height: calc(40vh);
+
+    div {
+      height: 40vh;
+    }
   }
 
   .wave {
