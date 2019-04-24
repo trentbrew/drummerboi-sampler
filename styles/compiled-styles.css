@@ -8,10 +8,6 @@ body {
   background-color: white; }
 
 .app {
-  height: 100vh;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   text-align: center; }
 
 header {
