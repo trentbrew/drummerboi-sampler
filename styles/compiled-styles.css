@@ -42,7 +42,8 @@ header p {
 
 .pads > div {
   height: 50vh;
-  transition: 600ms; }
+  transition: 600ms;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
   .pads > div:hover {
     opacity: 0.5;
     cursor: pointer; }
