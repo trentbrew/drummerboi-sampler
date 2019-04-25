@@ -82,7 +82,8 @@ header p {
   top: calc(50% - 10px);
   background: url("../res/wave.svg");
   animation: wave 8s linear infinite;
-  transform: rotate(180deg); }
+  transform: rotate(180deg);
+  pointer-events: none; }
 
 @keyframes wave {
   0% {
@@ -105,188 +106,14 @@ header p {
       cursor: pointer;
       opacity: 1; }
 
-/* falling notes animation */
-#notes {
-  position: absolute;
-  top: -100px;
-  width: 100%;
-  text-align: left; }
-
-#notes i {
-  display: inline-block;
-  width: 200px;
-  height: 200px;
-  z-index: 1;
-  -webkit-animation: falling 7s 0s infinite;
-  margin-left: 10%; }
-
-#notes i:nth-of-type(2n) {
-  -webkit-animation: falling2 7s 0s infinite; }
-
-#notes i:nth-of-type(3n) {
-  -webkit-animation: falling3 7s 0s infinite; }
-
-#notes i:nth-of-type(n) {
-  height: 23px;
-  width: 30px; }
-
-#notes i:nth-of-type(n):before {
-  width: 7px;
-  height: 5px;
-  top: 17px;
-  right: 1px; }
-
-#notes i:nth-of-type(n):after {
-  width: 2px;
-  height: 17px;
-  left: 12px;
-  top: 0px; }
-
-#notes i:nth-of-type(2n+1) {
-  height: 40px;
-  width: 40px; }
-
-#notes i:nth-of-type(2n+1):before {
-  width: 20px;
-  height: 20px;
-  top: 7px;
-  left: 0px; }
-
-#notes i:nth-of-type(2n+1):after {
-  width: 2px;
-  height: 6px;
-  right: 5px;
-  top: 1px; }
-
-#notes i:nth-of-type(3n+2) {
-  height: 17px;
-  width: 23px; }
-
-#notes i:nth-of-type(3n+2):before {
-  height: 4px;
-  width: 4px;
-  top: 12px;
-  left: 1px; }
-
-#notes i:nth-of-type(3n+2):after {
-  height: 10px;
-  width: 2px;
-  top: 1px;
-  right: 8px; }
-
-#notes i:nth-of-type(n) {
-  -webkit-animation-delay: 1.9s; }
-
-#notes i:nth-of-type(2n) {
-  -webkit-animation-delay: 3.9s; }
-
-#notes i:nth-of-type(3n) {
-  -webkit-animation-delay: 2.3s; }
-
-#notes i:nth-of-type(4n) {
-  -webkit-animation-delay: 4.4s; }
-
-#notes i:nth-of-type(5n) {
-  -webkit-animation-delay: 5s; }
-
-#notes i:nth-of-type(6n) {
-  -webkit-animation-delay: 3.5s; }
-
-#notes i:nth-of-type(7n) {
-  -webkit-animation-delay: 2.8s; }
-
-#notes i:nth-of-type(8n) {
-  -webkit-animation-delay: 1.5s; }
-
-#notes i:nth-of-type(9n) {
-  -webkit-animation-delay: 3.3s; }
-
-#notes i:nth-of-type(10n) {
-  -webkit-animation-delay: 2.5s; }
-
-#notes i:nth-of-type(11n) {
-  -webkit-animation-delay: 1.2s; }
-
-#notes i:nth-of-type(12n) {
-  -webkit-animation-delay: 4.1s; }
-
-#notes i:nth-of-type(13n) {
-  -webkit-animation-delay: 1s; }
-
-#notes i:nth-of-type(14n) {
-  -webkit-animation-delay: 4.7s; }
-
-#notes i:nth-of-type(15n) {
-  -webkit-animation-delay: 3s; }
-
-#notes i:nth-of-type(n) {
-  background-image: url("../res/music-icon1.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  filter: invert(0); }
-
-#notes i:nth-of-type(2n+2) {
-  background-image: url("../res/music-icon2.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  filter: invert(0); }
-
-#notes i:nth-of-type(4n+1) {
-  background-image: url("../res/music-icon2.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  filter: invert(0); }
-
-#notes i:nth-of-type(n) {
-  opacity: .3; }
-
-#notes i:nth-of-type(3n+1) {
-  opacity: .5; }
-
-#notes i:nth-of-type(3n+2) {
-  opacity: .3; }
-
-#notes i:nth-of-type(n) {
-  transform: rotate(180deg); }
-
-#notes i:nth-of-type(n) {
-  -webkit-animation-timing-function: ease-in-out; }
-
-@-webkit-keyframes falling {
-  0% {
-    -webkit-transform: translate3d(300, 0, 0) rotate(0deg); }
-  60% {
-    opacity: 0; }
-  100% {
-    -webkit-transform: translate3d(350px, 100vh, 0) rotate(90deg);
-    opacity: 0; } }
-@-webkit-keyframes falling3 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(-20deg); }
-  60% {
-    opacity: 0; }
-  100% {
-    -webkit-transform: translate3d(230px, 100vh, 0) rotate(-70deg);
-    opacity: 0; } }
-@-webkit-keyframes falling2 {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0) rotate(90deg); }
-  60% {
-    opacity: 0; }
-  100% {
-    -webkit-transform: translate3d(400px, 100vh, 0) rotate(0deg);
-    opacity: 0; } }
 @media only screen and (max-width: 768px) {
   .pads {
-    height: calc(40vh); }
+    height: 40vh; }
     .pads div {
       height: 40vh; }
 
   .wave {
-    top: calc(60% - 10px); }
+    top: 50vh; }
 
   header {
     top: 35%; }
@@ -304,6 +131,12 @@ header p {
     height: 70px; }
 
   .menu-container {
-    padding: 20px; } }
+    padding: 20px; }
+
+  @keyframes wave {
+    0% {
+      background-position: 0px 0px; }
+    100% {
+      background-position: -800px 0px; } } }
 
 /*# sourceMappingURL=compiled-styles.css.map */
