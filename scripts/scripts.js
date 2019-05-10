@@ -252,7 +252,7 @@ const soundpacks = {
       }
     ]
   },
-  Memes: {
+  /*Memes: {
     titleColor: "#d79e00",
     sounds: [
       {
@@ -286,7 +286,7 @@ const soundpacks = {
         volume: 1
       }
     ]
-  }
+  }*/
 };
 
 const defaultOptionStyle = {
