@@ -1,292 +1,268 @@
+var firstTry = true;
+var pending = [];
+//timer();
+
 /*
   Constants
 */
 
 // Number of simultaneous playbacks that can exist for a single sound
-const simultaneousPlaybacks = 5;
+const simultaneousPlaybacks = 1;
 
 // Soundpacks
 const soundpacks = {
-  Standard: {
+  Drums: {
+    loopable: true,
     titleColor: "#e57373",
     sounds: [
       {
-        src: "./sounds/pack1/clay.mp3",
+        src: "./sounds/splice/drums/drums1.wav",
         padColor: "#e57373",
         volume: 1
       },
       {
-        src: "./sounds/pack1/bubbles.mp3",
+        src: "./sounds/splice/drums/drums2.wav",
         padColor: "#FFA726",
         volume: 1
       },
       {
-        src: "./sounds/pack1/moon.mp3",
+        src: "./sounds/splice/drums/drums3.wav",
         padColor: "#FFEB3B",
         volume: 1
       },
       {
-        src: "./sounds/pack1/big-snare.wav",
+        src: "./sounds/splice/drums/drums4.wav",
         padColor: "#66BB6A",
         volume: 1
       },
       {
-        src: "./sounds/pack1/ufo.mp3",
+        src: "./sounds/splice/drums/drums5.wav",
         padColor: "#1E88E5",
         volume: 1
       },
       {
-        src: "./sounds/pack1/glimmer.mp3",
+        src: "./sounds/splice/drums/drums6.wav",
         padColor: "#CE93D8",
         volume: 1
       }
     ]
   },
-  Vaporwave: {
+  Bass: {
+    loopable: true,
     titleColor: "#c9a7d7",
     sounds: [
       {
-        src: "./sounds/pack7/tom.wav",
+        src: "./sounds/splice/bass/bass1.wav",
         padColor: "#c9a7d7",
         volume: 1
       },
       {
-        src: "./sounds/pack7/chords8.wav",
+        src: "./sounds/splice/bass/bass2.wav",
         padColor: "#cab8d9",
         volume: 1
       },
       {
-        src: "./sounds/pack7/11.wav",
+        src: "./sounds/splice/bass/bass3.wav",
         padColor: "#cacad9",
         volume: 1
       },
       {
-        src: "./sounds/pack7/Snare.wav",
+        src: "./sounds/splice/bass/bass4.wav",
         padColor: "#c9dadb",
         volume: 1
       },
       {
-        src: "./sounds/pack7/80s.wav",
+        src: "./sounds/splice/bass/bass5.wav",
         padColor: "#caeada",
         volume: 1
       },
       {
-        src: "./sounds/pack7/Clap.wav",
+        src: "./sounds/splice/bass/bass7.wav",
         padColor: "#caf7dc",
         volume: 1
       }
     ]
   },
-  Techno: {
+  Guitar: {
+    loopable: true,
     titleColor: "#d658ab",
     sounds: [
       {
-        src: "./sounds/pack2/kick35.wav",
+        src: "./sounds/splice/guitar/guitar1.wav",
         padColor: "#d658ab",
         volume: 1
       },
       {
-        src: "./sounds/pack2/fx8.wav",
+        src: "./sounds/splice/guitar/guitar6.wav",
         padColor: "#963b74",
         volume: 1
       },
       {
-        src: "./sounds/pack2/fx6.wav",
+        src: "./sounds/splice/guitar/guitar3.wav",
         padColor: "#232227",
         volume: 1
       },
       {
-        src: "./sounds/pack2/fx23.wav",
+        src: "./sounds/splice/guitar/guitar4.wav",
         padColor: "#326c71",
         volume: 1
       },
       {
-        src: "./sounds/pack2/beep.wav",
+        src: "./sounds/splice/guitar/guitar5.wav",
         padColor: "#6dc1bb",
         volume: 1
       },
       {
-        src: "./sounds/pack2/Effect3.wav",
+        src: "./sounds/splice/guitar/guitar2.wav",
         padColor: "#a2dfd6",
         volume: 1
       }
     ]
   },
-  Funky: {
+  Synth: {
+    loopable: true,
     titleColor: "#9aafc5",
     sounds: [
       {
-        src: "./sounds/pack4/bass3.wav",
+        src: "./sounds/splice/synth/synth1.wav",
         padColor: "#9aafc5",
         volume: 1
       },
       {
-        src: "./sounds/pack4/bass1.wav",
+        src: "./sounds/splice/synth/synth2.wav",
         padColor: "#5ec2c7",
         volume: 1
       },
       {
-        src: "./sounds/pack4/bass2.wav",
+        src: "./sounds/splice/synth/synth3.wav",
         padColor: "#ab567f",
         volume: 1
       },
       {
-        src: "./sounds/pack4/snare.wav",
+        src: "./sounds/splice/synth/synth4.wav",
         padColor: "#882d4a",
         volume: 1
       },
       {
-        src: "./sounds/pack4/chord7.wav",
+        src: "./sounds/splice/synth/synth5.wav",
         padColor: "#c8bf62",
         volume: 1
       },
       {
-        src: "./sounds/pack4/clap.wav",
+        src: "./sounds/splice/synth/synth7.wav",
         padColor: "#d0dcde",
         volume: 1
       }
     ]
   },
-  Island: {
+  Piano: {
+    loopable: true,
     titleColor: "#5c6d42",
     sounds: [
       {
-        src: "./sounds/pack5/boop2.wav",
+        src: "./sounds/splice/piano/piano1.wav",
         padColor: "#5c6d42",
         volume: 1
       },
       {
-        src: "./sounds/pack5/boop.WAV",
+        src: "./sounds/splice/piano/piano2.wav",
         padColor: "#da7a29",
         volume: 1
       },
       {
-        src: "./sounds/pack5/conga.WAV",
+        src: "./sounds/splice/piano/piano3.wav",
         padColor: "#e5b325",
         volume: 1
       },
       {
-        src: "./sounds/pack5/clock.WAV",
+        src: "./sounds/splice/piano/piano4.wav",
         padColor: "#ca9024",
         volume: 1
       },
       {
-        src: "./sounds/pack5/shaker.wav",
+        src: "./sounds/splice/piano/piano5.wav",
         padColor: "#357b89",
         volume: 1
       },
       {
-        src: "./sounds/pack5/shaker2.wav",
+        src: "./sounds/splice/piano/piano6.wav",
         padColor: "#1b4e66",
         volume: 1
       }
     ]
   },
-  "Lo-Fi": {
+  Brass: {
+    loopable: true,
     titleColor: "#ebb8a7",
     sounds: [
       {
-        src: "./sounds/pack6/low-kick.wav",
+        src: "./sounds/splice/brass/brass1.wav",
         padColor: "#ebb8a7",
         volume: 1
       },
       {
-        src: "./sounds/pack6/kick.wav",
+        src: "./sounds/splice/brass/brass2.wav",
         padColor: "#ee9b80",
         volume: 1
       },
       {
-        src: "./sounds/pack6/crisp.WAV",
+        src: "./sounds/splice/brass/brass3.wav",
         padColor: "#d48874",
         volume: 1
       },
       {
-        src: "./sounds/pack6/clap.wav",
+        src: "./sounds/splice/brass/brass4.wav",
         padColor: "#368196",
         volume: 1
       },
       {
-        src: "./sounds/pack6/chord9.wav",
+        src: "./sounds/splice/brass/brass5.wav",
         padColor: "#205973",
         volume: 1
       },
       {
-        src: "./sounds/pack6/crash.wav",
+        src: "./sounds/splice/brass/brass6.wav",
         padColor: "#0f3441",
         volume: 1
       }
     ]
   },
-  Pop: {
+  Tones: {
+    loopable: false,
     titleColor: "#b6ceec",
     sounds: [
       {
-        src: "./sounds/pack3/kick.wav",
+        src: "./sounds/splice/tones/tone1.wav",
         padColor: "#b6ceec",
         volume: 1
       },
       {
-        src: "./sounds/pack3/snare.wav",
+        src: "./sounds/splice/tones/tone2.wav",
         padColor: "#eebfd3",
         volume: 1
       },
       {
-        src: "./sounds/pack3/crash.wav",
+        src: "./sounds/splice/tones/tone3.wav",
         padColor: "#e47da2",
         volume: 1
       },
       {
-        src: "./sounds/pack3/clap.wav",
+        src: "./sounds/splice/tones/tone4.wav",
         padColor: "#f1a8b4",
         volume: 1
       },
       {
-        src: "./sounds/pack3/guitar.wav",
+        src: "./sounds/splice/tones/tone5.mp3",
         padColor: "#f5c3c0",
         volume: 1
       },
       {
-        src: "./sounds/pack3/Shat07.wav",
+        src: "./sounds/splice/tones/tone6.wav",
         padColor: "#f2ebd8",
         volume: 1
       }
     ]
-  },
-  /*Memes: {
-    titleColor: "#d79e00",
-    sounds: [
-      {
-        src: "./sounds/pack8/hitmarker.mp3",
-        padColor: "#d79e00",
-        volume: 1
-      },
-      {
-        src: "./sounds/pack8/oof.wav",
-        padColor: "#bb00d9",
-        volume: 1
-      },
-      {
-        src: "./sounds/pack8/bruh.mp3",
-        padColor: "#00d94b",
-        volume: 1
-      },
-      {
-        src: "./sounds/pack8/profanity.mp3",
-        padColor: "#dadb00",
-        volume: 1
-      },
-      {
-        src: "./sounds/pack8/damsun.mp3",
-        padColor: "#1200ea",
-        volume: 1
-      },
-      {
-        src: "./sounds/pack8/illuminooty.mp3",
-        padColor: "#f72300",
-        volume: 1
-      }
-    ]
-  }*/
+  }
 };
 
 const defaultOptionStyle = {
@@ -323,6 +299,7 @@ Object.keys(soundpacks).forEach(soundpackName => {
 const pads = document.querySelectorAll(".pads div");
 const options = document.querySelectorAll(".menu-container li");
 const image = document.getElementById("visual");
+var timerEl = document.getElementById("timer");
 
 /*
   U T I L S
@@ -355,9 +332,44 @@ const wrapInt = (value, min, max) => value >= max ? min :
 /*
   F U N C T I O N A L I T Y
 */
+function buildLoopAudio(sound) {
+  const buildEl = () => {
+    const audioEl = document.createElement("audio");
+
+    //removes dealy
+    var audio_file = new Audio(sound.src);
+    audio_file.addEventListener('timeupdate', function(){
+      var buffer = .3
+      if(this.currentTime > this.duration - buffer) {
+        this.currentTime = 0
+        this.play()
+      }}, false);
+
+      return audio_file;
+
+    //audioEl.src = sound.src;
+    //audioEl.volume = sound.volume;
+    //return audioEl;
+  };
+
+  const els = Array.from(Array(simultaneousPlaybacks), buildEl);
+
+  return {
+    audioElements: els,
+    elementIndex: 0,
+    play() {
+      const sound = this.audioElements[this.elementIndex];
+      this.elementIndex = wrapInt(this.elementIndex + 1, 0, this.audioElements.length);
+      sound.currentTime = 0;
+      sound.play();
+    }
+  }
+}
+
 function buildAudio(sound) {
   const buildEl = () => {
     const audioEl = document.createElement("audio");
+
     audioEl.src = sound.src;
     audioEl.volume = sound.volume;
     return audioEl;
@@ -405,10 +417,21 @@ function selectSoundpack(soundpackName) {
   const soundpack = soundpacks[currentSoundpackName];
   applySoundpackStyles(soundpackName);
 
+  /*pads.forEach(
+    (pad, index) =>
+      //pad.classList.remove("waiting")
+  );
+*/
   // Load soundpack if not already loaded
   if (!(currentSoundpackName in audios)) {
-    console.log(`Loading soundpack: ${currentSoundpackName}`);
-    audios[currentSoundpackName] = soundpack.sounds.map(sound => buildAudio(sound));
+    //console.log(`Loading soundpack: ${currentSoundpackName}`);
+    if(soundpack.loopable) {
+      audios[currentSoundpackName] = soundpack.sounds.map(sound => buildLoopAudio(sound));
+    }
+    else {
+      audios[currentSoundpackName] = soundpack.sounds.map(sound => buildAudio(sound));
+    }
+
   }
 }
 
@@ -434,10 +457,6 @@ function cycleImage() {
 
 function playSound(index) {
   audios[currentSoundpackName][index].play();
-}
-
-function pianoKey(index) {
-  playSound(index);
   cycleImage();
 }
 
@@ -447,38 +466,93 @@ function pianoKey(index) {
 
 // On paddo boi clicked
 pads.forEach((pad, index) => {
-  pad.onclick = () => pianoKey(index);
+  pad.onclick = () => {
+    console.log("clicked pad");
+    console.log("Just a sec...");
+    pad.classList.add("waiting");
+    pending.push(index);
+      //console.log("pad: " + pad);
+
+      console.log("clicked pad");
+      if(firstTry) {
+        timer();
+        firstTry = false;
+      }
+  }
 });
 
 // Keyboard controls the keyboard lol
 document.onkeydown = ({ keyCode }) => {
+    //soundpack.classList.add("waiting");
+  console.log("hold on...");
   if (keyCode == 65) { // a
-    pianoKey(0);
+    pending.push(0);
   } else if(keyCode == 83) { // s
-    pianoKey(1);
+    pending.push(1);
   } else if(keyCode == 68) { // d
-    pianoKey(2);
+    pending.push(2);
   } else if(keyCode == 70) { // f
-    pianoKey(3);
+    pending.push(3);
   } else if(keyCode == 71) { // g
-    pianoKey(4);
+    pending.push(4);
   } else if(keyCode == 72) { // h
-    pianoKey(5);
+    pending.push(5);
   } else if (keyCode === 37 || keyCode === 38) {
     previousSoundpack();
   } else if (keyCode === 39 || keyCode === 40) {
     nextSoundpack();
   }
+
+  console.log("clicked pad");
+  if(firstTry) {
+    timer();
+    firstTry = false;
+  }
+
+  //timerEl.style.animation = "timer 12s ease infinite";
 };
+
+function timer() {
+  if(firstTry) {
+    for(let i = 0; i < pending.length; i++) {
+      playSound(pending[i]);
+      //console.log("playing sound: " + pending[i]);
+    }
+    pads.forEach((pad, index) => {
+      pad.classList.remove("waiting");
+    });
+  }
+  timerEl.classList.add("timer-active");
+  console.log(pending);
+  setTimeout(function() {
+    //pad.classList.remove("waiting");
+    console.log(pending.length);
+    for(let i = 0; i < pending.length; i++) {
+      playSound(pending[i]);
+      //console.log("playing sound: " + pending[i]);
+      pads.forEach((pad, index) => {
+        pad.classList.remove("waiting");
+      });
+    }
+    timer();
+  }, 12000);
+
+  pending = [];
+  /*while(playing.length > 0) {
+
+  }*/
+  //firstTry = true;
+}
 
 /*
  State Initialization
 */
 
+let playing = [];
 let currentImg = 0;
 let currentSoundpackName;
 let audios = {};
-selectSoundpack("Standard");
+selectSoundpack("Drums");
 
 // Easter egg
 document.getElementById('visual').onclick =

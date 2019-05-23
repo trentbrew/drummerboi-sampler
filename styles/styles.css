@@ -1,14 +1,15 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
-  background:white;
+  background: white;
 }
 
 .app {
@@ -16,7 +17,6 @@ body {
 }
 
 header {
-  //margin-top: 140px;
   position: absolute;
   margin: auto;
   left: 0;
@@ -44,32 +44,36 @@ header p {
   margin: auto;
   left: 0;
   right: 0;
+  display: -ms-grid;
   display: grid;
   border-radius: 200px 200px 0px 0px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   bottom: 0px;
 }
 
 .pads > div {
   height: 50vh;
+  -webkit-transition: 300ms;
   transition: 300ms;
   text-align: left;
+}
 
-  span {
-    position: absolute;
-    bottom: 0px;
-    font-size: 24px;
-    font-weight: bold;
-    color: black;
-    opacity: 0.3;
-    padding: 0px 0px 30px 45px;
-  }
+.pads > div span {
+  position: absolute;
+  bottom: 0px;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  opacity: 0.3;
+  padding: 0px 0px 30px 45px;
+}
 
-  &:hover {
-    filter: brightness(0.7);
-    color: white;
-    cursor: pointer;
-  }
+.pads > div:hover {
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+  color: white;
+  cursor: pointer;
 }
 
 .pad1 {
@@ -78,12 +82,10 @@ header p {
 
 .pad2 {
   background: #FFA726;
-
 }
 
 .pad3 {
   background: #FFEB3B;
-
 }
 
 .pad4 {
@@ -92,16 +94,13 @@ header p {
 
 .pad5 {
   background: #1E88E5;
-  //border-radius: 0px 200px 0px 0px;
 }
 
 .pad6 {
   background: #CE93D8;
-  //border-radius: 200px 0px 0px 0px;
 }
 
 #visual {
-  //position: absolute;
   background-image: url("../res/pose1.png");
   background-position: bottom;
   background-repeat: no-repeat;
@@ -110,7 +109,6 @@ header p {
   height: 120px;
   margin-left: auto;
   margin-right: auto;
-  //filter:invert(1);
 }
 
 .wave {
@@ -119,16 +117,26 @@ header p {
   height: 140px;
   top: calc(50% - 10px);
   background: url("../res/wave.svg");
-  animation: wave 8s linear infinite;
-  transform: rotate(180deg);
+  -webkit-animation: wave 8s linear infinite;
+          animation: wave 8s linear infinite;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
   pointer-events: none;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -1600px 0px;
+  }
 }
 
 @keyframes wave {
   0% {
     background-position: 0px 0px;
   }
-
   100% {
     background-position: -1600px 0px;
   }
@@ -138,53 +146,43 @@ header p {
   position: absolute;
   padding: 40px;
   z-index: 10;
-  //color: white;
+}
 
-  ul {
-    list-style: none;
-  }
+.menu-container ul {
+  list-style: none;
+}
 
-  li:nth-child(1) {
-    font-weight: bolder;
-    font-size: 28px;
-    //opacity: 0.5;
-    //color: #ef9a9a;
-  }
+.menu-container li:nth-child(1) {
+  font-weight: bolder;
+  font-size: 28px;
+}
 
-  li {
-    margin-bottom: 10px;
-    transition: 300ms;
-    //color: white !important;
-    //opacity: 0.5;
+.menu-container li {
+  margin-bottom: 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
 
-    &:hover {
-      cursor: pointer;
-      //opacity: 0.4;
-    }
-  }
+.menu-container li:hover {
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
   .pads {
     height: 40vh;
-
-    div {
-      height: 40vh;
-    }
-
-    span {
-      display: none;
-    }
   }
-
+  .pads div {
+    height: 40vh;
+  }
+  .pads span {
+    display: none;
+  }
   .wave {
     top: 60vh;
   }
-
   header {
     top: 35%;
   }
-
   header h1 {
     margin-top: 60px;
     font-size: 28px;
@@ -193,30 +191,50 @@ header p {
   header p {
     font-size: 14px;
   }
-
   #visual {
     width: 70px;
     height: 70px;
   }
-
   .menu-container {
     padding: 20px;
   }
 }
 
-.timer-active {
-  animation: timer 12s ease infinite;
-}
-
 #timer {
-  width: 50%;
-  height: 15px;
+  width: 0%;
+  height: 5px;
   background: black;
   border-radius: 0px 30px 30px 0px;
 }
 
+.timer-active {
+  -webkit-animation: timer 12s ease infinite;
+          animation: timer 12s ease infinite;
+}
+
 .waiting {
-  animation: waiting 500ms ease infinite;
+  -webkit-animation: waiting 250ms ease infinite;
+          animation: waiting 250ms ease infinite;
+}
+
+@-webkit-keyframes timer {
+  0% {
+    width: 0px;
+  }
+  25% {
+    width: 25%;
+  }
+  50% {
+    width: 50%;
+  }
+  75% {
+    width: 75%;
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 0;
+  }
 }
 
 @keyframes timer {
@@ -239,6 +257,15 @@ header p {
   }
 }
 
+@-webkit-keyframes waiting {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
 @keyframes waiting {
   0% {
     opacity: 1;
@@ -247,3 +274,4 @@ header p {
     opacity: 0.3;
   }
 }
+/*# sourceMappingURL=styles.css.map */
