@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var firstTry = true;
 var pending = [];
 //timer();
@@ -44,6 +45,44 @@ const soundpacks = {
         src: "./sounds/splice/drums/drums6.wav",
         padColor: "#CE93D8",
         volume: 1
+=======
+window.addEventListener("load", () => {
+  const soundPack1 = document.querySelectorAll(".sound-pack1");
+  const soundPack2 = document.querySelectorAll(".sound-pack2");
+  const soundPack3 = document.querySelectorAll(".sound-pack3");
+  const soundPack4 = document.querySelectorAll(".sound-pack4");
+  const soundPack5 = document.querySelectorAll(".sound-pack5");
+  const soundPack6 = document.querySelectorAll(".sound-pack6");
+  const soundPack7 = document.querySelectorAll(".sound-pack7");
+  const soundPack9 = document.querySelectorAll(".sound-pack9");
+  const pads = document.querySelectorAll(".pads div");
+  const options = document.querySelectorAll(".menu-container li");
+  const image = document.getElementById("visual");
+  var rand = 0;
+  var currentImg = 0;
+  var soundPackx = soundPack1;
+
+  var img = [
+    "url('res/pose1.png')",
+    "url('res/pose2.png')",
+    "url('res/pose3.png')",
+    "url('res/pose4.png')",
+    "url('res/pose5.png')",
+    "url('res/pose6.png')"
+  ];
+
+  options.forEach((option) => {
+    option.addEventListener("click", function() {
+      if(option.innerHTML == "Standard") {
+        option.style.color = "#ef9a9a";
+        soundPackx = soundPack1;
+        pads[0].style.backgroundColor = "#e57373";
+        pads[1].style.backgroundColor = "#FFA726";
+        pads[2].style.backgroundColor = "#FFEB3B";
+        pads[3].style.backgroundColor = "#66BB6A";
+        pads[4].style.backgroundColor = "#1E88E5";
+        pads[5].style.backgroundColor = "#CE93D8";
+>>>>>>> 42cc1441c635eef94fdc44983d490848c8ae7549
       }
     ]
   },
