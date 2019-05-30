@@ -8,7 +8,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background:white;
+  background-color: white;
 }
 
 .app {
@@ -52,22 +52,10 @@ header p {
 
 .pads > div {
   height: 50vh;
-  transition: 300ms;
-  text-align: left;
-
-  span {
-    position: absolute;
-    bottom: 0px;
-    font-size: 24px;
-    font-weight: bold;
-    color: black;
-    opacity: 0.3;
-    padding: 0px 0px 30px 45px;
-  }
+  transition: 600ms;
 
   &:hover {
-    filter: brightness(0.7);
-    color: white;
+    opacity: 0.5;
     cursor: pointer;
   }
 }
@@ -110,7 +98,6 @@ header p {
   height: 120px;
   margin-left: auto;
   margin-right: auto;
-  //filter:invert(1);
 }
 
 .wave {
@@ -138,7 +125,6 @@ header p {
   position: absolute;
   padding: 40px;
   z-index: 10;
-  //color: white;
 
   ul {
     list-style: none;
@@ -154,31 +140,34 @@ header p {
   li {
     margin-bottom: 10px;
     transition: 300ms;
-    //color: white !important;
     //opacity: 0.5;
 
     &:hover {
       cursor: pointer;
-      //opacity: 0.4;
+      opacity: 1;
     }
   }
 }
 
 @media only screen and (max-width: 768px) {
   .pads {
-    height: 40vh;
+    height: 30vh;
 
-    div {
-      height: 40vh;
+    .pad1 {
+      border-radius: 100px 0px 0px 0px;
     }
 
-    span {
-      display: none;
+    .pad6 {
+      border-radius: 0px 100px 0px 0px;
+    }
+
+    div {
+      height: 30vh;
     }
   }
 
   .wave {
-    top: 60vh;
+    display: none;
   }
 
   header {
@@ -201,49 +190,5 @@ header p {
 
   .menu-container {
     padding: 20px;
-  }
-}
-
-.timer-active {
-  animation: timer 12s ease infinite;
-}
-
-#timer {
-  width: 50%;
-  height: 15px;
-  background: black;
-  border-radius: 0px 30px 30px 0px;
-}
-
-.waiting {
-  animation: waiting 500ms ease infinite;
-}
-
-@keyframes timer {
-  0% {
-    width: 0px;
-  }
-  25% {
-    width: 25%;
-  }
-  50% {
-    width: 50%;
-  }
-  75% {
-    width: 75%;
-    opacity: 1;
-  }
-  100% {
-    width: 100%;
-    opacity: 0;
-  }
-}
-
-@keyframes waiting {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.3;
   }
 }

@@ -9,7 +9,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: white;
+  background-color: white;
 }
 
 .app {
@@ -54,25 +54,12 @@ header p {
 
 .pads > div {
   height: 50vh;
-  -webkit-transition: 300ms;
-  transition: 300ms;
-  text-align: left;
-}
-
-.pads > div span {
-  position: absolute;
-  bottom: 0px;
-  font-size: 24px;
-  font-weight: bold;
-  color: black;
-  opacity: 0.3;
-  padding: 0px 0px 30px 45px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
 }
 
 .pads > div:hover {
-  -webkit-filter: brightness(0.7);
-          filter: brightness(0.7);
-  color: white;
+  opacity: 0.5;
   cursor: pointer;
 }
 
@@ -165,20 +152,24 @@ header p {
 
 .menu-container li:hover {
   cursor: pointer;
+  opacity: 1;
 }
 
 @media only screen and (max-width: 768px) {
   .pads {
-    height: 40vh;
+    height: 30vh;
+  }
+  .pads .pad1 {
+    border-radius: 100px 0px 0px 0px;
+  }
+  .pads .pad6 {
+    border-radius: 0px 100px 0px 0px;
   }
   .pads div {
-    height: 40vh;
-  }
-  .pads span {
-    display: none;
+    height: 30vh;
   }
   .wave {
-    top: 60vh;
+    display: none;
   }
   header {
     top: 35%;
@@ -197,81 +188,6 @@ header p {
   }
   .menu-container {
     padding: 20px;
-  }
-}
-
-#timer {
-  width: 0%;
-  height: 5px;
-  background: black;
-  border-radius: 0px 30px 30px 0px;
-}
-
-.timer-active {
-  -webkit-animation: timer 12s ease infinite;
-          animation: timer 12s ease infinite;
-}
-
-.waiting {
-  -webkit-animation: waiting 250ms ease infinite;
-          animation: waiting 250ms ease infinite;
-}
-
-@-webkit-keyframes timer {
-  0% {
-    width: 0px;
-  }
-  25% {
-    width: 25%;
-  }
-  50% {
-    width: 50%;
-  }
-  75% {
-    width: 75%;
-    opacity: 1;
-  }
-  100% {
-    width: 100%;
-    opacity: 0;
-  }
-}
-
-@keyframes timer {
-  0% {
-    width: 0px;
-  }
-  25% {
-    width: 25%;
-  }
-  50% {
-    width: 50%;
-  }
-  75% {
-    width: 75%;
-    opacity: 1;
-  }
-  100% {
-    width: 100%;
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes waiting {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.3;
-  }
-}
-
-@keyframes waiting {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.3;
   }
 }
 /*# sourceMappingURL=styles.css.map */
