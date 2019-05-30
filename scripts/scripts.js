@@ -6,6 +6,7 @@ window.addEventListener("load", () => {
   const soundPack5 = document.querySelectorAll(".sound-pack5");
   const soundPack6 = document.querySelectorAll(".sound-pack6");
   const soundPack7 = document.querySelectorAll(".sound-pack7");
+  const soundPack9 = document.querySelectorAll(".sound-pack9");
   const pads = document.querySelectorAll(".pads div");
   const options = document.querySelectorAll(".menu-container li");
   const image = document.getElementById("visual");
