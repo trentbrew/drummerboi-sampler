@@ -54,8 +54,19 @@ header p {
 
 .pads > div {
   height: 50vh;
-  -webkit-transition: 600ms;
-  transition: 600ms;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  text-align: left;
+}
+
+.pads > div span {
+  position: absolute;
+  bottom: 0px;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  opacity: 0.3;
+  padding: 0px 0px 30px 45px;
 }
 
 .pads > div:hover {
@@ -152,24 +163,20 @@ header p {
 
 .menu-container li:hover {
   cursor: pointer;
-  opacity: 1;
 }
 
 @media only screen and (max-width: 768px) {
   .pads {
-    height: 30vh;
-  }
-  .pads .pad1 {
-    border-radius: 100px 0px 0px 0px;
-  }
-  .pads .pad6 {
-    border-radius: 0px 100px 0px 0px;
+    height: 40vh;
   }
   .pads div {
-    height: 30vh;
+    height: 40vh;
+  }
+  .pads span {
+    display: none;
   }
   .wave {
-    display: none;
+    top: 60vh;
   }
   header {
     top: 35%;

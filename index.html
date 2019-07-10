@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,18 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Drummerboi</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="styles/styles.css" />
+    <link type="text/css" rel="stylesheet" href="styles/compiled-styles.css" />
   </head>
   <body>
     <div class="menu-container">
-      <ul>
-        <li>Standard</li>
-        <li>Vaporwave</li>
-        <li>Techno</li>
-        <li>Island</li>
-        <li>Funky</li>
-        <li>Lo-Fi</li>
-        <li>Pop</li>
+      <ul id="options">
+        <!-- Dynamically populated -->
       </ul>
     </div>
     <div class="app">
@@ -27,64 +22,17 @@
         <p>Make music by tapping</p>
       </header>
       <div class="pads">
-        <div class="pad1">
-          <audio class="sound-pack1" src="./sounds/pack1/clay.mp3"></audio>
-          <audio class="sound-pack2" src="./sounds/pack2/kick35.wav"></audio>
-          <audio class="sound-pack3" src="./sounds/pack3/kick.wav"></audio>
-          <audio class="sound-pack4" src="./sounds/pack4/bass3.wav"></audio>
-          <audio class="sound-pack5" src="./sounds/pack5/boop2.wav"></audio>
-          <audio class="sound-pack6" src="./sounds/pack6/low-kick.wav"></audio>
-          <audio class="sound-pack7" src="./sounds/pack7/tom.wav"></audio>
-        </div>
-        <div class="pad2">
-          <audio class="sound-pack1" src="./sounds/pack1/moon.mp3"></audio>
-          <audio class="sound-pack2" src="./sounds/pack2/fx8.wav"></audio>
-          <audio class="sound-pack3" src="./sounds/pack3/snare.wav"></audio>
-          <audio class="sound-pack4" src="./sounds/pack4/bass1.wav"></audio>
-          <audio class="sound-pack5" src="./sounds/pack5/boop.WAV"></audio>
-          <audio class="sound-pack6" src="./sounds/pack6/kick.wav"></audio>
-          <audio class="sound-pack7" src="./sounds/pack7/chords8.wav"></audio>
-        </div>
-        <div class="pad3">
-          <audio class="sound-pack1" src="./sounds/pack1/big-snare.wav"></audio>
-          <audio class="sound-pack2" src="./sounds/pack2/fx6.wav"></audio>
-          <audio class="sound-pack3" src="./sounds/pack3/crash.wav"></audio>
-          <audio class="sound-pack4" src="./sounds/pack4/bass2.wav"></audio>
-          <audio class="sound-pack5" src="./sounds/pack5/conga.WAV"></audio>
-          <audio class="sound-pack6" src="./sounds/pack6/crisp.WAV"></audio>
-          <audio class="sound-pack7" src="./sounds/pack7/11.wav"></audio>
-        </div>
-        <div class="pad4">
-          <audio class="sound-pack1" src="./sounds/pack1/ufo.mp3"></audio>
-          <audio class="sound-pack2" src="./sounds/pack2/fx23.wav"></audio>
-          <audio class="sound-pack3" src="./sounds/pack3/clap.wav"></audio>
-          <audio class="sound-pack4" src="./sounds/pack4/snare.wav"></audio>
-          <audio class="sound-pack5" src="./sounds/pack5/clock.WAV"></audio>
-          <audio class="sound-pack6" src="./sounds/pack6/clap.wav"></audio>
-          <audio class="sound-pack7" src="./sounds/pack7/Snare.wav"></audio>
-        </div>
-        <div class="pad5">
-          <audio class="sound-pack1" src="./sounds/pack1/bubbles.mp3"></audio>
-          <audio class="sound-pack2" src="./sounds/pack2/Effect3.wav"></audio>
-          <audio class="sound-pack3" src="./sounds/pack3/Shat07.wav"></audio>
-          <audio class="sound-pack4" src="./sounds/pack4/clap.wav"></audio>
-          <audio class="sound-pack5" src="./sounds/pack5/shaker2.wav"></audio>
-          <audio class="sound-pack6" src="./sounds/pack6/crash.wav"></audio>
-          <audio class="sound-pack7" src="./sounds/pack7/Clap.wav"></audio>
-        </div>
-        <div class="pad6">
-          <audio class="sound-pack1" src="./sounds/pack1/glimmer.mp3"></audio>
-          <audio class="sound-pack2" src="./sounds/pack2/beep.wav"></audio>
-          <audio class="sound-pack3" src="./sounds/pack3/guitar.wav"></audio>
-          <audio class="sound-pack4" src="./sounds/pack4/chord7.wav"></audio>
-          <audio class="sound-pack5" src="./sounds/pack5/shaker.wav"></audio>
-          <audio class="sound-pack6" src="./sounds/pack6/chord9.wav"></audio>
-          <audio class="sound-pack7" src="./sounds/pack7/80s.wav"></audio>
-        </div>
+        <div class="pad1"><span>a</span></div>
+        <div class="pad2"><span>s</span></div>
+        <div class="pad3"><span>d</span></div>
+        <div class="pad4"><span>f</span></div>
+        <div class="pad5"><span>g</span></div>
+        <div class="pad6"><span>h</span></div>
       </div>
       <div class="wave"></div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.core.min.js" type="text/javascript"></script>
     <script src="scripts/scripts.js" type="text/javascript"></script>
   </body>
 </html>
