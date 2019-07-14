@@ -302,10 +302,10 @@ header p {
 
 @media only screen and (max-width: 768px) {
   .pads {
-    height: 40vh;
+    height: 30vh;
 
     div {
-      height: 40vh;
+      height: 30vh;
     }
 
     span {
@@ -313,9 +313,17 @@ header p {
     }
   }
 
-  .wave {
-    top: 60%;
+  .pad1 {
+    border-radius: 100px 0px 0px 0px;
   }
+
+  .pad6 {
+    border-radius: 0px 100px 0px 0px;
+  }
+
+  /*.wave {
+    top: 60%;
+  }*/
 
   header {
     top: 35%;
