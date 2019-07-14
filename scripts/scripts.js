@@ -156,17 +156,17 @@ const soundpacks = {
         volume: 1
       },
       {
-        src: "./sounds/pack5/boop.WAV",
+        src: "./sounds/pack5/boop.wav",
         padColor: "#da7a29",
         volume: 1
       },
       {
-        src: "./sounds/pack5/conga.WAV",
+        src: "./sounds/pack5/conga.wav",
         padColor: "#e5b325",
         volume: 1
       },
       {
-        src: "./sounds/pack5/clock.WAV",
+        src: "./sounds/pack5/clock.wav",
         padColor: "#ca9024",
         volume: 1
       },
@@ -186,32 +186,32 @@ const soundpacks = {
     titleColor: "#ebb8a7",
     sounds: [
       {
-        src: "./sounds/tones/lofi/OS_BT_Bound_Kick.WAV",
+        src: "./sounds/tones/lofi/OS_BT_Bound_Kick.wav",
         padColor: "#ebb8a7",
         volume: 1
       },
       {
-        src: "./sounds/tones/lofi/OS_BT_Boxy_Snare.WAV",
+        src: "./sounds/tones/lofi/OS_BT_Boxy_Snare.wav",
         padColor: "#ee9b80",
         volume: 1
       },
       {
-        src: "./sounds/tones/lofi/OS_BT_E_Maxim_808.WAV",
+        src: "./sounds/tones/lofi/OS_BT_E_Maxim_808.wav",
         padColor: "#d48874",
         volume: 1
       },
       {
-        src: "./sounds/tones/lofi/OS_BT_Lush_Snare.WAV",
+        src: "./sounds/tones/lofi/OS_BT_Lush_Snare.wav",
         padColor: "#368196",
         volume: 1
       },
       {
-        src: "./sounds/tones/lofi/OS_BT_Nightlight_Hat.WAV",
+        src: "./sounds/tones/lofi/OS_BT_Nightlight_Hat.wav",
         padColor: "#205973",
         volume: 1
       },
       {
-        src: "./sounds/tones/lofi/OS_BT_Relax_Perc.WAV",
+        src: "./sounds/tones/lofi/OS_BT_Relax_Perc.wav",
         padColor: "#0f3441",
         volume: 1
       }
