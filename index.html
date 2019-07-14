@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Drummerboi</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="styles/compiled-styles.css" />
+    <link type="text/css" rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
     <div class="menu-container">
@@ -15,7 +15,31 @@
         <!-- Dynamically populated -->
       </ul>
     </div>
+    <div class="loop-button-container">
+      <div onclick="handleLoopClick(1)" class="loop-button"><audio preload="auto" loop="false" id="loop1" src="./sounds/loops/standard/OS_BT_85_Drum_Loop_Gucci.wav"></audio></div>
+      <div onclick="handleLoopClick(2)" class="loop-button"><audio preload="auto" loop="false" id="loop2" src="./sounds/loops/vaporwave/Organ.wav"></audio></div>
+      <div onclick="handleLoopClick(3)" class="loop-button"><audio preload="auto" loop="false" id="loop3" src="./sounds/loops/dubstep/V_RIOT_drum_loop_dubstep_03_150.wav"></audio></div>
+      <div onclick="handleLoopClick(4)" class="loop-button"><audio preload="auto" loop="false" id="loop4" src="./sounds/loops/funky/ah_drum_90_buckethat_full.wav"></audio></div>
+      <div onclick="handleLoopClick(5)" class="loop-button"><audio preload="auto" loop="false" id="loop5" src="./sounds/loops/island/ah_drum_90_yung_full.wav"></audio></div>
+      <div onclick="handleLoopClick(6)" class="loop-button"><audio preload="auto" loop="false" id="loop6" src="./sounds/loops/lofi/CAP_85_vinyl_piano_the_walker_F.wav"></audio></div>
+      <div onclick="handleLoopClick(7)" class="loop-button"><audio preload="auto" loop="false" id="loop7" src="./sounds/loops/pop/dolphin6.wav"></audio></div>
+      <div onclick="handleLoopClick(8)" style="opacity:0.3" class="loop-button"><audio preload="auto" loop="false" id="loop8" src="./sounds/loops/standard/guitar.wav"></audio></div>
+      <div onclick="handleLoopClick(9)" style="opacity:0.3" class="loop-button"><audio preload="auto" loop="false" id="loop9" src="./sounds/loops/vaporwave/JAFUNK_synth_loop_intention_113_F.wav"></audio></div>
+      <div onclick="handleLoopClick(10)" style="opacity:0.3" class="loop-button"><audio preload="auto" loop="false" id="loop10" src="./sounds/loops/lofi/CKV_85_vintage_synth_DX7_simm_Cm.wav"></audio></div>
+    </div>
+    <!--div class="menu-container-top">
+        <ul id="options-top">
+        </ul>
+      </div-->
     <div class="app">
+        <!--div class="pads-top">
+            <div class="pad1"><span>q</span></div>
+            <div class="pad2"><span>w</span></div>
+            <div class="pad3"><span>e</span></div>
+            <div class="pad4"><span>r</span></div>
+            <div class="pad5"><span>t</span></div>
+            <div class="pad6"><span>y</span></div>
+          </div-->
       <header>
         <div id="visual"></div>
         <h1>Drummerboi</h1>
@@ -29,6 +53,7 @@
         <div class="pad5"><span>g</span></div>
         <div class="pad6"><span>h</span></div>
       </div>
+      <!--div class="wave-top"></div-->
       <div class="wave"></div>
     </div>
 

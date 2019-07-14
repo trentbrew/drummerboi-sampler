@@ -3,7 +3,7 @@
 */
 
 // Number of simultaneous playbacks that can exist for a single sound
-const simultaneousPlaybacks = 5;
+const simultaneousPlaybacks = 1;
 
 // Soundpacks
 const soundpacks = {
@@ -51,12 +51,12 @@ const soundpacks = {
         volume: 1
       },
       {
-        src: "./sounds/pack7/chords8.wav",
+        src: "./sounds/tones/vaporwave/SubStab.WAV",
         padColor: "#cab8d9",
         volume: 1
       },
       {
-        src: "./sounds/pack7/11.wav",
+        src: "./sounds/tones/vaporwave/vw_kick_don.WAV",
         padColor: "#cacad9",
         volume: 1
       },
@@ -77,36 +77,36 @@ const soundpacks = {
       }
     ]
   },
-  Techno: {
+  Dubstep: {
     titleColor: "#d658ab",
     sounds: [
       {
-        src: "./sounds/pack2/kick35.wav",
+        src: "./sounds/tones/dubstep/V_RIOT_synth_loop_angry_cello_150_F.wav",
         padColor: "#d658ab",
         volume: 1
       },
       {
-        src: "./sounds/pack2/fx8.wav",
+        src: "./sounds/tones/dubstep/V_RIOT_synth_loop_big_chords_150_F.wav",
         padColor: "#963b74",
         volume: 1
       },
       {
-        src: "./sounds/pack2/fx6.wav",
+        src: "./sounds/tones/dubstep/V_RIOT_synth_loop_droplets_150_F.wav",
         padColor: "#232227",
         volume: 1
       },
       {
-        src: "./sounds/pack2/fx23.wav",
+        src: "./sounds/tones/dubstep/V_RIOT_bass_loop_bark_02_150_F.wav",
         padColor: "#326c71",
         volume: 1
       },
       {
-        src: "./sounds/pack2/beep.wav",
+        src: "./sounds/tones/dubstep/V_RIOT_bass_loop_brutality_02_150_F.wav",
         padColor: "#6dc1bb",
         volume: 1
       },
       {
-        src: "./sounds/pack2/Effect3.wav",
+        src: "./sounds/tones/dubstep/V_RIOT_bass_loop_thick_sounds_04_150_F.wav",
         padColor: "#a2dfd6",
         volume: 1
       }
@@ -136,7 +136,7 @@ const soundpacks = {
         volume: 1
       },
       {
-        src: "./sounds/pack4/chord7.wav",
+        src: "./sounds/pack6/chord9.wav",
         padColor: "#c8bf62",
         volume: 1
       },
@@ -186,32 +186,32 @@ const soundpacks = {
     titleColor: "#ebb8a7",
     sounds: [
       {
-        src: "./sounds/pack6/low-kick.wav",
+        src: "./sounds/tones/lofi/OS_BT_Bound_Kick.WAV",
         padColor: "#ebb8a7",
         volume: 1
       },
       {
-        src: "./sounds/pack6/kick.wav",
+        src: "./sounds/tones/lofi/OS_BT_Boxy_Snare.WAV",
         padColor: "#ee9b80",
         volume: 1
       },
       {
-        src: "./sounds/pack6/crisp.WAV",
+        src: "./sounds/tones/lofi/OS_BT_E_Maxim_808.WAV",
         padColor: "#d48874",
         volume: 1
       },
       {
-        src: "./sounds/pack6/clap.wav",
+        src: "./sounds/tones/lofi/OS_BT_Lush_Snare.WAV",
         padColor: "#368196",
         volume: 1
       },
       {
-        src: "./sounds/pack6/chord9.wav",
+        src: "./sounds/tones/lofi/OS_BT_Nightlight_Hat.WAV",
         padColor: "#205973",
         volume: 1
       },
       {
-        src: "./sounds/pack6/crash.wav",
+        src: "./sounds/tones/lofi/OS_BT_Relax_Perc.WAV",
         padColor: "#0f3441",
         volume: 1
       }
@@ -241,7 +241,7 @@ const soundpacks = {
         volume: 1
       },
       {
-        src: "./sounds/pack3/guitar.wav",
+        src: "./sounds/tones/pop/dolphin_lead.wav",
         padColor: "#f5c3c0",
         volume: 1
       },
@@ -297,7 +297,8 @@ const defaultOptionStyle = {
 
 const selectedOptionStyle = {
   fontSize: "28px",
-  fontWeight: "bolder"
+  fontWeight: "bolder",
+  color: "black"
 };
 
 // Animation boi
@@ -312,6 +313,7 @@ const img = [
 
 // DOM stuff
 const optionsUl = document.getElementById("options");
+//const optionsUlTop = document.getElementById("options-top");
 
 Object.keys(soundpacks).forEach(soundpackName => {
   const li = document.createElement("li");
@@ -320,8 +322,18 @@ Object.keys(soundpacks).forEach(soundpackName => {
   optionsUl.appendChild(li);
 });
 
+/*Object.keys(soundpacks).forEach(soundpackName => {
+  const li = document.createElement("li");
+  li.innerHTML = soundpackName;
+  li.onclick = () => selectSoundpack(soundpackName);
+  optionsUlTop.appendChild(li);
+});*/
+
 const pads = document.querySelectorAll(".pads div");
+const loops = document.querySelectorAll(".loop-button-container div");
+//const padsTop = document.querySelectorAll(".pads-top div");
 const options = document.querySelectorAll(".menu-container li");
+//const optionsTop = document.querySelectorAll(".menu-container-top li");
 const image = document.getElementById("visual");
 
 /*
@@ -398,12 +410,104 @@ function applySoundpackStyles(soundpackName) {
     (pad, index) =>
       (pad.style.backgroundColor = soundpack.sounds[index].padColor)
   );
+
+  /*loops.forEach((loop, index) =>
+      (loop.style.backgroundColor = soundpack.sounds[index].padColor)
+  );*/
+}
+
+var playing = 10;
+var currentPack = 1;
+
+function handleLoopClick(num) {
+  for(let i = 0; i < loops.length; i++) {
+    
+    loops[i].style.animation = "none";
+    loops[i].style.backgroundImage = "url('.//res/baseline-play_circle_outline-24px.svg')";
+
+    if(i == num) {
+      document.getElementById("loop" + i).play();
+    }
+  }
+
+  //if pause clicked
+  if(num == playing) {
+    document.getElementById("loop" + playing).pause();
+    loops[num-1].style.animation = "none";
+    loops[num-1].style.backgroundImage = "url('.//res/baseline-play_circle_outline-24px.svg')";
+    //playing = 10;
+    console.log(playing);
+  }
+  else {
+    loops[num-1].style.backgroundImage = "url('./res/baseline-pause_circle_filled-24px.svg')";
+    //loops[0].style.transform = "rotate(360deg)";
+    loops[num-1].style.animation = "spin 4s infinite linear";
+    console.log(playing);
+    document.getElementById("loop" + playing).pause();
+    document.getElementById("loop" + num).play();
+    playing = num;
+  }
 }
 
 function selectSoundpack(soundpackName) {
   currentSoundpackName = soundpackName;
   const soundpack = soundpacks[currentSoundpackName];
   applySoundpackStyles(soundpackName);
+
+  //loops[currentPack-1].style.backgroundImage = "url('./res/baseline-play_circle_filled-24px.svg')"
+
+  for(let i = 0; i < loops.length; i++) {
+    loops[i].style.filter = "invert(0)";
+    loops[i].style.backgroundColor = "white";
+
+    if(playing == i) {
+      //loops[i].style.backgroundImage = "url('./res/baseline-pause_circle_filled-24px.svg')";
+    }
+  }
+
+  if(currentSoundpackName == "Standard") {
+    console.log("only show first loop button");
+    loops[0].style.backgroundColor = "#1a8c8c";
+    loops[0].style.filter = "invert(1)";
+    currentPack = 1;
+    //loops[0].style.backgroundImage = "url('./res/baseline-play_circle_filled-24px.svg')";
+  }
+  else if(currentSoundpackName == "Vaporwave") {
+    console.log("only show second loop button");
+    loops[1].style.backgroundColor = "#365828";
+    loops[1].style.filter = "invert(1)";
+    currentPack = 2;
+  }
+  else if(currentSoundpackName == "Dubstep") {
+    console.log("only show third loop button");
+    loops[2].style.backgroundColor = "#36ad5f";
+    loops[2].style.filter = "invert(1)";
+    currentPack = 3;
+  }
+  else if(currentSoundpackName == "Funky") {
+    console.log("only show fourth loop button");
+    loops[3].style.backgroundColor = "#65503a";
+    loops[3].style.filter = "invert(1)";
+    currentPack = 4;
+  }
+  else if(currentSoundpackName == "Island") {
+    console.log("only show fifth loop button");
+    loops[4].style.backgroundColor = "#baaece";
+    loops[4].style.filter = "invert(1)";
+    currentPack = 5;
+  }
+  else if(currentSoundpackName == "Lo-Fi") {
+    console.log("only show sixth loop button");
+    loops[5].style.backgroundColor = "#144758";
+    loops[5].style.filter = "invert(1)";
+    currentPack = 6;
+  }
+  else if(currentSoundpackName == "Pop") {
+    console.log("only show seventh loop button");
+    loops[6].style.backgroundColor = "#493113";
+    loops[6].style.filter = "invert(1)";
+    currentPack = 7;
+  }
 
   // Load soundpack if not already loaded
   if (!(currentSoundpackName in audios)) {
