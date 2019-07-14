@@ -51,12 +51,12 @@ const soundpacks = {
         volume: 1
       },
       {
-        src: "./sounds/tones/vaporwave/SubStab.WAV",
+        src: "./sounds/tones/vaporwave/SubStab.wav",
         padColor: "#cab8d9",
         volume: 1
       },
       {
-        src: "./sounds/tones/vaporwave/vw_kick_don.WAV",
+        src: "./sounds/tones/vaporwave/vw_kick_don.wav",
         padColor: "#cacad9",
         volume: 1
       },
