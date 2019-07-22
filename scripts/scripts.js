@@ -81,16 +81,6 @@ const soundpacks = {
     titleColor: "#d658ab",
     sounds: [
       {
-        src: "./sounds/tones/dubstep/V_RIOT_synth_loop_angry_cello_150_F.wav",
-        padColor: "#d658ab",
-        volume: 1
-      },
-      {
-        src: "./sounds/tones/dubstep/V_RIOT_synth_loop_big_chords_150_F.wav",
-        padColor: "#963b74",
-        volume: 1
-      },
-      {
         src: "./sounds/tones/dubstep/V_RIOT_synth_loop_droplets_150_F.wav",
         padColor: "#232227",
         volume: 1
@@ -196,22 +186,32 @@ const soundpacks = {
         volume: 1
       },
       {
-        src: "./sounds/tones/lofi/OS_BT_E_Maxim_808.wav",
+        src: "./sounds/loops/lofi/OS_DD2_80_Am_Haze_Dusty_Synths.wav",
         padColor: "#d48874",
         volume: 1
       },
       {
-        src: "./sounds/tones/lofi/OS_BT_Lush_Snare.wav",
+        src: "./sounds/loops/lofi/OS_DD2_80_Am_Daydreams_Guitars_Chords.wav",
         padColor: "#368196",
         volume: 1
       },
       {
-        src: "./sounds/tones/lofi/OS_BT_Nightlight_Hat.wav",
+        src: "./sounds/loops/lofi/OS_DD2_80_Am_Haze_Keys_Chords.wav",
         padColor: "#205973",
         volume: 1
       },
       {
-        src: "./sounds/tones/lofi/OS_BT_Relax_Perc.wav",
+        src: "./sounds/loops/lofi/OS_DD2_80_Am_Lofi_Piano_Jamz_Chords.wav",
+        padColor: "#0f3441",
+        volume: 1
+      },
+      {
+        src: "./sounds/loops/lofi/OS_DD2_80_Am_Reverie_Keys_Chords.wav",
+        padColor: "#0f3441",
+        volume: 1
+      },
+      {
+        src: "./sounds/loops/lofi/OS_DD2_80_Am_Reverie_Sub_Bass.wav",
         padColor: "#0f3441",
         volume: 1
       }
@@ -423,9 +423,13 @@ function handleLoopClick(num) {
   for(let i = 0; i < loops.length; i++) {
     
     loops[i].style.animation = "none";
+    loops[i].style.opacity = 1;
+    if(i >= 7) {
+      loops[i].style.opacity = 0.4;
+    }
     loops[i].style.backgroundImage = "url('.//res/baseline-play_circle_outline-24px.svg')";
 
-    if(i == num) {
+    if(i == num) {  
       document.getElementById("loop" + i).play();
     }
   }
@@ -434,12 +438,14 @@ function handleLoopClick(num) {
   if(num == playing) {
     document.getElementById("loop" + playing).pause();
     loops[num-1].style.animation = "none";
+    loops[num-1].style.opacity = 1;
     loops[num-1].style.backgroundImage = "url('.//res/baseline-play_circle_outline-24px.svg')";
     //playing = 10;
     console.log(playing);
   }
   else {
     loops[num-1].style.backgroundImage = "url('./res/baseline-pause_circle_filled-24px.svg')";
+    loops[num-1].style.opacity = 1;
     //loops[0].style.transform = "rotate(360deg)";
     loops[num-1].style.animation = "spin 4s infinite linear";
     console.log(playing);

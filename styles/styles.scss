@@ -36,12 +36,19 @@ body {
   //margin: 40px;
   transition: 300ms;
   margin: 5px;
-  
+  //opacity: 0;  
 
   &:hover {
-    //transform: rotate(360deg);
     cursor: pointer;
-    background-image: url("../res/baseline-play_circle_filled-24px.svg");
+    //background-image: url("../res/baseline-play_circle_filled-24px.svg") !important;
+  }
+}
+
+.loop-button-container div {
+  opacity: 0;
+
+  &:hover {
+    transform: scale(1.2);
   }
 }
 
@@ -67,8 +74,9 @@ header h1 {
 header p {
   font-size: 20px;
   color: black;
-  opacity: 0.4;
-  margin-top: -25px;
+  opacity: 0;
+  margin-top: 6%;
+  animation: subtitle-swoop 1s ease forwards 4.5s;
 }
 
 .pads-top {
@@ -100,6 +108,7 @@ header p {
   height: 50vh;
   transition: 300ms;
   text-align: left;
+  opacity: 0;
 
   span {
     position: absolute;
@@ -109,10 +118,11 @@ header p {
     color: black;
     opacity: 0.3;
     padding: 0px 0px 30px 45px;
+    transition: 500ms;
   }
 
   &:hover {
-    opacity: 0.5;
+    filter: brightness(.8);
     cursor: pointer;
   }
 }
@@ -140,29 +150,33 @@ header p {
 
 .pad1 {
   background: #e57373;
+  //animation: padIntro 0.8s ease-out forwards;
 }
 
 .pad2 {
   background: #FFA726;
-
+  //animation: padIntro 0.8s ease-out forwards 0.2s;
 }
 
 .pad3 {
   background: #FFEB3B;
-
+  //animation: padIntro 0.8s ease-out forwards 0.4s;
 }
 
 .pad4 {
   background: #66BB6A;
+  //animation: padIntro 0.8s ease-out forwards 0.6s;
 }
 
 .pad5 {
   background: #1E88E5;
+  //animation: padIntro 0.8s ease-out forwards 0.8s;
   //border-radius: 0px 200px 0px 0px;
 }
 
 .pad6 {
   background: #CE93D8;
+  //animation: padIntro 0.8s ease-out forwards 1.0s;
   //border-radius: 200px 0px 0px 0px;
 }
 
@@ -176,6 +190,8 @@ header p {
   height: 120px;
   margin-left: auto;
   margin-right: auto;
+  opacity: 0;
+  animation: visual-swoop 1s ease forwards 5.5s;
 }
 
 .wave {
@@ -232,6 +248,21 @@ header p {
   }
 }
 
+@keyframes padIntro {
+  from {
+    height: 0%;
+    span {
+      opacity: 0;
+    }
+  }
+  to {
+    height: 100%;
+    span {
+      opacity: 1;
+    }
+  }
+}
+
 .menu-container-top {
   position: absolute;
   padding: 40px;
@@ -284,19 +315,289 @@ header p {
   li:nth-child(1) {
     font-weight: bolder;
     font-size: 28px;
-    //opacity: 0.5;
     //color: #ef9a9a;
   }
 
   li {
     margin-bottom: 10px;
     transition: 300ms;
+    opacity: 0;
     //opacity: 0.5;
 
     &:hover {
       cursor: pointer;
-      //opacity: 0.4;
+      //font-size: 23px;
     }
+  }
+}
+
+
+#logo {
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fill 1s ease forwards 4.5s;
+  //animation: shiftLogo 1s ease forwards 4s; 
+}
+
+#logo path:nth-child(1) {
+  stroke-dasharray: 313;
+  stroke-dashoffset: 313;
+  animation: line-animate 2s ease-in forwards;
+}
+#logo path:nth-child(2) {
+  stroke-dasharray: 119;
+  stroke-dashoffset: 119;
+  animation: line-animate 2s ease-in forwards 0.3s;
+}
+#logo path:nth-child(3) {
+  stroke-dasharray: 206;
+  stroke-dashoffset: 206;
+  animation: line-animate 2s ease-in forwards 0.6s;
+}
+#logo path:nth-child(4) {
+  stroke-dasharray: 325;
+  stroke-dashoffset: 325;
+  animation: line-animate 2s ease-in forwards 0.9s;
+}
+#logo path:nth-child(5) {
+  stroke-dasharray: 325;
+  stroke-dashoffset: 325;
+  animation: line-animate 2s ease-in forwards 1.2s;
+}
+#logo path:nth-child(6) {
+  stroke-dasharray: 247;
+  stroke-dashoffset: 247;
+  animation: line-animate 2s ease-in forwards 1.5s;
+}
+#logo path:nth-child(7) {
+  stroke-dasharray: 119;
+  stroke-dashoffset: 119;
+  animation: line-animate 2s ease-in forwards 1.8s;
+}
+#logo path:nth-child(8) {
+  stroke-dasharray: 280;
+  stroke-dashoffset: 280;
+  animation: line-animate 2s ease-in forwards 2.1s;
+}
+#logo path:nth-child(9) {
+  stroke-dasharray: 213;
+  stroke-dashoffset: 213;
+  animation: line-animate 2s ease-in forwards 2.4s;
+}
+#logo path:nth-child(10) {
+  stroke-dasharray: 109;
+  stroke-dashoffset: 109;
+  animation: line-animate 2s ease-in forwards 2.7s;
+}
+
+ul {
+
+}
+
+ul li:nth-child(1) {
+  animation: menu-intro 0.5s ease forwards 6s;
+}
+ul li:nth-child(2) {
+  animation: menu-intro 0.5s ease forwards 6.1s;
+}
+ul li:nth-child(3) {
+  animation: menu-intro 0.5s ease forwards 6.2s;
+}
+ul li:nth-child(4) {
+  animation: menu-intro 0.5s ease forwards 6.3s;
+}
+ul li:nth-child(5) {
+  animation: menu-intro 0.5s ease forwards 6.4s;
+}
+ul li:nth-child(6) {
+  animation: menu-intro 0.5s ease forwards 6.5s;
+}
+ul li:nth-child(7) {
+  animation: menu-intro 0.5s ease forwards 6.6s;
+}
+
+.loop-button-container div:nth-child(1) {
+  animation: backtrack-intro 0.5s ease forwards 6.7s;
+}
+.loop-button-container div:nth-child(2) {
+  animation: backtrack-intro 0.5s ease forwards 6.8s;
+}
+.loop-button-container div:nth-child(3) {
+  animation: backtrack-intro 0.5s ease forwards 6.9s;
+}
+.loop-button-container div:nth-child(4) {
+  animation: backtrack-intro 0.5s ease forwards 7s;
+}
+.loop-button-container div:nth-child(5) {
+  animation: backtrack-intro 0.5s ease forwards 7.1s;
+}
+.loop-button-container div:nth-child(6) {
+  animation: backtrack-intro 0.5s ease forwards 7.2s;
+}
+.loop-button-container div:nth-child(7) {
+  animation: backtrack-intro 0.5s ease forwards 7.3s;
+}
+.loop-button-container div:nth-child(8) {
+  animation: backtrack-intro2 0.5s ease forwards 7.4s;
+}
+.loop-button-container div:nth-child(9) {
+  animation: backtrack-intro2 0.5s ease forwards 7.5s;
+}
+.loop-button-container div:nth-child(10) {
+  animation: backtrack-intro2 0.5s ease forwards 7.6s;
+}
+
+.pads div:nth-child(1) {
+  animation: pad-intro 0.5s ease-in forwards 5s;
+}
+.pads div:nth-child(2) {
+  animation: pad-intro 0.5s ease-in forwards 5.1s;
+}
+.pads div:nth-child(3) {
+  animation: pad-intro 0.5s ease-in forwards 5.2s;
+}
+.pads div:nth-child(4) {
+  animation: pad-intro 0.5s ease-in forwards 5.3s;
+}
+.pads div:nth-child(5) {
+  animation: pad-intro 0.5s ease-in forwards 5.4s;
+}
+.pads div:nth-child(6) {
+  animation: pad-intro 0.5s ease-in forwards 5.5s;
+}
+.pads div:nth-child(7) {
+  animation: pad-intro 0.5s ease-in forwards 5.6s;
+}
+.pads div:nth-child(8) {
+  animation: pad-intro 0.5s ease-in forwards 5.7s;
+}
+
+@keyframes line-animate {
+  to {
+      stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill {
+  from {
+      fill: transparent;
+      width: 465px;
+      top: 130%;
+  }
+  to {
+      fill: black;
+      width: 270px;
+      top: 73%;
+  }
+}
+
+@keyframes fill-mobile {
+  from {
+      fill: transparent;
+      width: 270px;
+  }
+  to {
+      fill: black;
+      width: 200px;
+  }
+}
+
+@keyframes shiftLogo {
+  from {
+    width: 465px;
+    top: 130%;
+  }
+  to {
+    width: 270px;
+    top: 73%;
+  }
+}
+
+@keyframes shiftLogoMobile {
+  from {
+    width: 270px;
+    top: 50%;
+  }
+  to {
+    width: 200px;
+    top: 50%;
+  }
+}
+
+@keyframes shift-subtitle-mobile {
+  from {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  to {
+    tranform: translateY(100px);
+    opacity: 1;
+  }
+}
+
+@keyframes menu-intro {
+  from {
+    margin-bottom: 60px;
+    opacity: 0;
+  }
+  to {
+    margin-bottom: 10px;
+    opacity: 1;
+  }
+}
+
+@keyframes backtrack-intro {
+  from {
+    margin-bottom: 60px;
+    opacity: 0;
+  }
+  to {
+    margin-bottom: 5px;
+    opacity: 1;
+  }
+}
+
+@keyframes backtrack-intro2 {
+  from {
+    margin-bottom: 60px;
+    opacity: 0;
+  }
+  to {
+    margin-bottom: 5px;
+    opacity: 0.4;
+  }
+}
+
+@keyframes pad-intro {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes subtitle-swoop {
+  from {
+    opacity: 0;
+    margin-top: 6%;
+  }
+  to {
+    opacity: 0.4;
+    margin-top: 4%;
+  }
+}
+
+@keyframes visual-swoop {
+  from {
+    opacity: 0;
+    //margin-top: -30px;
+  }
+  to {
+    opacity: 1;
+    //margin-top: 0px;
   }
 }
 
@@ -322,6 +623,8 @@ header p {
   }
 
   .wave {
+    //border-radius: 100px;
+    //background: white;
     display: none;
   }
 
@@ -336,6 +639,8 @@ header p {
   }
   header p {
     font-size: 14px;
+    transform: translateY(40px);
+    animation: shift-subtitle-mobile 1s ease forwards 5s;
   }
 
   #visual {
@@ -355,4 +660,12 @@ header p {
     width: 35px;
     height: 35px;
   }
+
+  #logo {
+    top: 50%;
+    width: 270px;
+    animation: shiftLogoMobile 1s ease forwards 5s;
+    animation: fill-mobile 1s ease forwards 4.5s;
+  }
 }
+

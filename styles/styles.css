@@ -40,7 +40,15 @@ body {
 
 .loop-button:hover {
   cursor: pointer;
-  background-image: url("../res/baseline-play_circle_filled-24px.svg");
+}
+
+.loop-button-container div {
+  opacity: 0;
+}
+
+.loop-button-container div:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 header {
@@ -63,8 +71,10 @@ header h1 {
 header p {
   font-size: 20px;
   color: black;
-  opacity: 0.4;
-  margin-top: -25px;
+  opacity: 0;
+  margin-top: 6%;
+  -webkit-animation: subtitle-swoop 1s ease forwards 4.5s;
+          animation: subtitle-swoop 1s ease forwards 4.5s;
 }
 
 .pads-top {
@@ -102,6 +112,7 @@ header p {
   -webkit-transition: 300ms;
   transition: 300ms;
   text-align: left;
+  opacity: 0;
 }
 
 .pads > div span {
@@ -112,10 +123,13 @@ header p {
   color: black;
   opacity: 0.3;
   padding: 0px 0px 30px 45px;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 
 .pads > div:hover {
-  opacity: 0.5;
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
   cursor: pointer;
 }
 
@@ -174,6 +188,9 @@ header p {
   height: 120px;
   margin-left: auto;
   margin-right: auto;
+  opacity: 0;
+  -webkit-animation: visual-swoop 1s ease forwards 5.5s;
+          animation: visual-swoop 1s ease forwards 5.5s;
 }
 
 .wave {
@@ -261,6 +278,36 @@ header p {
   }
 }
 
+@-webkit-keyframes padIntro {
+  from {
+    height: 0%;
+    span {
+      opacity: 0;
+    }
+  }
+  to {
+    height: 100%;
+    span {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes padIntro {
+  from {
+    height: 0%;
+    span {
+      opacity: 0;
+    }
+  }
+  to {
+    height: 100%;
+    span {
+      opacity: 1;
+    }
+  }
+}
+
 .menu-container-top {
   position: absolute;
   padding: 40px;
@@ -319,10 +366,468 @@ header p {
   margin-bottom: 10px;
   -webkit-transition: 300ms;
   transition: 300ms;
+  opacity: 0;
 }
 
 .menu-container li:hover {
   cursor: pointer;
+}
+
+#logo {
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: fill 1s ease forwards 4.5s;
+          animation: fill 1s ease forwards 4.5s;
+}
+
+#logo path:nth-child(1) {
+  stroke-dasharray: 313;
+  stroke-dashoffset: 313;
+  -webkit-animation: line-animate 2s ease-in forwards;
+          animation: line-animate 2s ease-in forwards;
+}
+
+#logo path:nth-child(2) {
+  stroke-dasharray: 119;
+  stroke-dashoffset: 119;
+  -webkit-animation: line-animate 2s ease-in forwards 0.3s;
+          animation: line-animate 2s ease-in forwards 0.3s;
+}
+
+#logo path:nth-child(3) {
+  stroke-dasharray: 206;
+  stroke-dashoffset: 206;
+  -webkit-animation: line-animate 2s ease-in forwards 0.6s;
+          animation: line-animate 2s ease-in forwards 0.6s;
+}
+
+#logo path:nth-child(4) {
+  stroke-dasharray: 325;
+  stroke-dashoffset: 325;
+  -webkit-animation: line-animate 2s ease-in forwards 0.9s;
+          animation: line-animate 2s ease-in forwards 0.9s;
+}
+
+#logo path:nth-child(5) {
+  stroke-dasharray: 325;
+  stroke-dashoffset: 325;
+  -webkit-animation: line-animate 2s ease-in forwards 1.2s;
+          animation: line-animate 2s ease-in forwards 1.2s;
+}
+
+#logo path:nth-child(6) {
+  stroke-dasharray: 247;
+  stroke-dashoffset: 247;
+  -webkit-animation: line-animate 2s ease-in forwards 1.5s;
+          animation: line-animate 2s ease-in forwards 1.5s;
+}
+
+#logo path:nth-child(7) {
+  stroke-dasharray: 119;
+  stroke-dashoffset: 119;
+  -webkit-animation: line-animate 2s ease-in forwards 1.8s;
+          animation: line-animate 2s ease-in forwards 1.8s;
+}
+
+#logo path:nth-child(8) {
+  stroke-dasharray: 280;
+  stroke-dashoffset: 280;
+  -webkit-animation: line-animate 2s ease-in forwards 2.1s;
+          animation: line-animate 2s ease-in forwards 2.1s;
+}
+
+#logo path:nth-child(9) {
+  stroke-dasharray: 213;
+  stroke-dashoffset: 213;
+  -webkit-animation: line-animate 2s ease-in forwards 2.4s;
+          animation: line-animate 2s ease-in forwards 2.4s;
+}
+
+#logo path:nth-child(10) {
+  stroke-dasharray: 109;
+  stroke-dashoffset: 109;
+  -webkit-animation: line-animate 2s ease-in forwards 2.7s;
+          animation: line-animate 2s ease-in forwards 2.7s;
+}
+
+ul li:nth-child(1) {
+  -webkit-animation: menu-intro 0.5s ease forwards 6s;
+          animation: menu-intro 0.5s ease forwards 6s;
+}
+
+ul li:nth-child(2) {
+  -webkit-animation: menu-intro 0.5s ease forwards 6.1s;
+          animation: menu-intro 0.5s ease forwards 6.1s;
+}
+
+ul li:nth-child(3) {
+  -webkit-animation: menu-intro 0.5s ease forwards 6.2s;
+          animation: menu-intro 0.5s ease forwards 6.2s;
+}
+
+ul li:nth-child(4) {
+  -webkit-animation: menu-intro 0.5s ease forwards 6.3s;
+          animation: menu-intro 0.5s ease forwards 6.3s;
+}
+
+ul li:nth-child(5) {
+  -webkit-animation: menu-intro 0.5s ease forwards 6.4s;
+          animation: menu-intro 0.5s ease forwards 6.4s;
+}
+
+ul li:nth-child(6) {
+  -webkit-animation: menu-intro 0.5s ease forwards 6.5s;
+          animation: menu-intro 0.5s ease forwards 6.5s;
+}
+
+ul li:nth-child(7) {
+  -webkit-animation: menu-intro 0.5s ease forwards 6.6s;
+          animation: menu-intro 0.5s ease forwards 6.6s;
+}
+
+.loop-button-container div:nth-child(1) {
+  -webkit-animation: backtrack-intro 0.5s ease forwards 6.7s;
+          animation: backtrack-intro 0.5s ease forwards 6.7s;
+}
+
+.loop-button-container div:nth-child(2) {
+  -webkit-animation: backtrack-intro 0.5s ease forwards 6.8s;
+          animation: backtrack-intro 0.5s ease forwards 6.8s;
+}
+
+.loop-button-container div:nth-child(3) {
+  -webkit-animation: backtrack-intro 0.5s ease forwards 6.9s;
+          animation: backtrack-intro 0.5s ease forwards 6.9s;
+}
+
+.loop-button-container div:nth-child(4) {
+  -webkit-animation: backtrack-intro 0.5s ease forwards 7s;
+          animation: backtrack-intro 0.5s ease forwards 7s;
+}
+
+.loop-button-container div:nth-child(5) {
+  -webkit-animation: backtrack-intro 0.5s ease forwards 7.1s;
+          animation: backtrack-intro 0.5s ease forwards 7.1s;
+}
+
+.loop-button-container div:nth-child(6) {
+  -webkit-animation: backtrack-intro 0.5s ease forwards 7.2s;
+          animation: backtrack-intro 0.5s ease forwards 7.2s;
+}
+
+.loop-button-container div:nth-child(7) {
+  -webkit-animation: backtrack-intro 0.5s ease forwards 7.3s;
+          animation: backtrack-intro 0.5s ease forwards 7.3s;
+}
+
+.loop-button-container div:nth-child(8) {
+  -webkit-animation: backtrack-intro2 0.5s ease forwards 7.4s;
+          animation: backtrack-intro2 0.5s ease forwards 7.4s;
+}
+
+.loop-button-container div:nth-child(9) {
+  -webkit-animation: backtrack-intro2 0.5s ease forwards 7.5s;
+          animation: backtrack-intro2 0.5s ease forwards 7.5s;
+}
+
+.loop-button-container div:nth-child(10) {
+  -webkit-animation: backtrack-intro2 0.5s ease forwards 7.6s;
+          animation: backtrack-intro2 0.5s ease forwards 7.6s;
+}
+
+.pads div:nth-child(1) {
+  -webkit-animation: pad-intro 0.5s ease-in forwards 5s;
+          animation: pad-intro 0.5s ease-in forwards 5s;
+}
+
+.pads div:nth-child(2) {
+  -webkit-animation: pad-intro 0.5s ease-in forwards 5.1s;
+          animation: pad-intro 0.5s ease-in forwards 5.1s;
+}
+
+.pads div:nth-child(3) {
+  -webkit-animation: pad-intro 0.5s ease-in forwards 5.2s;
+          animation: pad-intro 0.5s ease-in forwards 5.2s;
+}
+
+.pads div:nth-child(4) {
+  -webkit-animation: pad-intro 0.5s ease-in forwards 5.3s;
+          animation: pad-intro 0.5s ease-in forwards 5.3s;
+}
+
+.pads div:nth-child(5) {
+  -webkit-animation: pad-intro 0.5s ease-in forwards 5.4s;
+          animation: pad-intro 0.5s ease-in forwards 5.4s;
+}
+
+.pads div:nth-child(6) {
+  -webkit-animation: pad-intro 0.5s ease-in forwards 5.5s;
+          animation: pad-intro 0.5s ease-in forwards 5.5s;
+}
+
+.pads div:nth-child(7) {
+  -webkit-animation: pad-intro 0.5s ease-in forwards 5.6s;
+          animation: pad-intro 0.5s ease-in forwards 5.6s;
+}
+
+.pads div:nth-child(8) {
+  -webkit-animation: pad-intro 0.5s ease-in forwards 5.7s;
+          animation: pad-intro 0.5s ease-in forwards 5.7s;
+}
+
+@-webkit-keyframes line-animate {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes line-animate {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes fill {
+  from {
+    fill: transparent;
+    width: 465px;
+    top: 130%;
+  }
+  to {
+    fill: black;
+    width: 270px;
+    top: 73%;
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+    width: 465px;
+    top: 130%;
+  }
+  to {
+    fill: black;
+    width: 270px;
+    top: 73%;
+  }
+}
+
+@-webkit-keyframes fill-mobile {
+  from {
+    fill: transparent;
+    width: 270px;
+  }
+  to {
+    fill: black;
+    width: 200px;
+  }
+}
+
+@keyframes fill-mobile {
+  from {
+    fill: transparent;
+    width: 270px;
+  }
+  to {
+    fill: black;
+    width: 200px;
+  }
+}
+
+@-webkit-keyframes shiftLogo {
+  from {
+    width: 465px;
+    top: 130%;
+  }
+  to {
+    width: 270px;
+    top: 73%;
+  }
+}
+
+@keyframes shiftLogo {
+  from {
+    width: 465px;
+    top: 130%;
+  }
+  to {
+    width: 270px;
+    top: 73%;
+  }
+}
+
+@-webkit-keyframes shiftLogoMobile {
+  from {
+    width: 270px;
+    top: 50%;
+  }
+  to {
+    width: 200px;
+    top: 50%;
+  }
+}
+
+@keyframes shiftLogoMobile {
+  from {
+    width: 270px;
+    top: 50%;
+  }
+  to {
+    width: 200px;
+    top: 50%;
+  }
+}
+
+@-webkit-keyframes shift-subtitle-mobile {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    tranform: translateY(100px);
+    opacity: 1;
+  }
+}
+
+@keyframes shift-subtitle-mobile {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    tranform: translateY(100px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes menu-intro {
+  from {
+    margin-bottom: 60px;
+    opacity: 0;
+  }
+  to {
+    margin-bottom: 10px;
+    opacity: 1;
+  }
+}
+
+@keyframes menu-intro {
+  from {
+    margin-bottom: 60px;
+    opacity: 0;
+  }
+  to {
+    margin-bottom: 10px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes backtrack-intro {
+  from {
+    margin-bottom: 60px;
+    opacity: 0;
+  }
+  to {
+    margin-bottom: 5px;
+    opacity: 1;
+  }
+}
+
+@keyframes backtrack-intro {
+  from {
+    margin-bottom: 60px;
+    opacity: 0;
+  }
+  to {
+    margin-bottom: 5px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes backtrack-intro2 {
+  from {
+    margin-bottom: 60px;
+    opacity: 0;
+  }
+  to {
+    margin-bottom: 5px;
+    opacity: 0.4;
+  }
+}
+
+@keyframes backtrack-intro2 {
+  from {
+    margin-bottom: 60px;
+    opacity: 0;
+  }
+  to {
+    margin-bottom: 5px;
+    opacity: 0.4;
+  }
+}
+
+@-webkit-keyframes pad-intro {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pad-intro {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes subtitle-swoop {
+  from {
+    opacity: 0;
+    margin-top: 6%;
+  }
+  to {
+    opacity: 0.4;
+    margin-top: 4%;
+  }
+}
+
+@keyframes subtitle-swoop {
+  from {
+    opacity: 0;
+    margin-top: 6%;
+  }
+  to {
+    opacity: 0.4;
+    margin-top: 4%;
+  }
+}
+
+@-webkit-keyframes visual-swoop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes visual-swoop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -354,6 +859,10 @@ header p {
   }
   header p {
     font-size: 14px;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+    -webkit-animation: shift-subtitle-mobile 1s ease forwards 5s;
+            animation: shift-subtitle-mobile 1s ease forwards 5s;
   }
   #visual {
     width: 70px;
@@ -368,6 +877,14 @@ header p {
   .loop-button {
     width: 35px;
     height: 35px;
+  }
+  #logo {
+    top: 50%;
+    width: 270px;
+    -webkit-animation: shiftLogoMobile 1s ease forwards 5s;
+            animation: shiftLogoMobile 1s ease forwards 5s;
+    -webkit-animation: fill-mobile 1s ease forwards 4.5s;
+            animation: fill-mobile 1s ease forwards 4.5s;
   }
 }
 /*# sourceMappingURL=styles.css.map */
