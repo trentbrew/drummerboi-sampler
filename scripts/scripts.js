@@ -147,7 +147,7 @@ const soundpacks = {
       }
     ]
   },
-  "Lo-Fi": {
+  "Piano": {
     titleColor: "#ebb8a7",
     sounds: [
       {
