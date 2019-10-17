@@ -86,27 +86,27 @@ const soundpacks = {
         volume: 1
       },
       {
-        src: "./sounds/young-girl/sample1.wav",
+        src: "./sounds/young-girl/sample2.wav",
         padColor: "#5ec2c7",
         volume: 1
       },
       {
-        src: "./sounds/young-girl/sample1.wav",
+        src: "./sounds/young-girl/sample3.wav",
         padColor: "#ab567f",
         volume: 1
       },
       {
-        src: "./sounds/young-girl/sample1.wav",
+        src: "./sounds/young-girl/sample4.wav",
         padColor: "#882d4a",
         volume: 1
       },
       {
-        src: "./sounds/young-girl/sample1.wav",
+        src: "./sounds/young-girl/sample5.wav",
         padColor: "#c8bf62",
         volume: 1
       },
       {
-        src: "./sounds/young-girl/sample1.wav",
+        src: "./sounds/young-girl/sample6.wav",
         padColor: "#d0dcde",
         volume: 1
       }
