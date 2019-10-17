@@ -81,23 +81,33 @@ const soundpacks = {
     titleColor: "#d658ab",
     sounds: [
       {
-        src: "./sounds/tones/dubstep/V_RIOT_synth_loop_droplets_150_F.wav",
-        padColor: "#232227",
+        src: "./sounds/young-girl/sample1.wav",
+        padColor: "#9aafc5",
         volume: 1
       },
       {
-        src: "./sounds/tones/dubstep/V_RIOT_bass_loop_bark_02_150_F.wav",
-        padColor: "#326c71",
+        src: "./sounds/young-girl/sample1.wav",
+        padColor: "#5ec2c7",
         volume: 1
       },
       {
-        src: "./sounds/tones/dubstep/V_RIOT_bass_loop_brutality_02_150_F.wav",
-        padColor: "#6dc1bb",
+        src: "./sounds/young-girl/sample1.wav",
+        padColor: "#ab567f",
         volume: 1
       },
       {
-        src: "./sounds/tones/dubstep/V_RIOT_bass_loop_thick_sounds_04_150_F.wav",
-        padColor: "#a2dfd6",
+        src: "./sounds/young-girl/sample1.wav",
+        padColor: "#882d4a",
+        volume: 1
+      },
+      {
+        src: "./sounds/young-girl/sample1.wav",
+        padColor: "#c8bf62",
+        volume: 1
+      },
+      {
+        src: "./sounds/young-girl/sample1.wav",
+        padColor: "#d0dcde",
         volume: 1
       }
     ]
@@ -176,32 +186,32 @@ const soundpacks = {
     titleColor: "#ebb8a7",
     sounds: [
       {
-        src: "./sounds/tones/lofi/OS_BT_Bound_Kick.wav",
+        src: "./sounds/time-after-time/tat1.wav",
         padColor: "#ebb8a7",
         volume: 1
       },
       {
-        src: "./sounds/tones/lofi/OS_BT_Boxy_Snare.wav",
+        src: "./sounds/time-after-time/tat2.wav",
         padColor: "#ee9b80",
         volume: 1
       },
       {
-        src: "./sounds/loops/lofi/OS_DD2_80_Am_Haze_Dusty_Synths.wav",
+        src: "./sounds/time-after-time/tat3.wav",
         padColor: "#d48874",
         volume: 1
       },
       {
-        src: "./sounds/loops/lofi/OS_DD2_80_Am_Daydreams_Guitars_Chords.wav",
+        src: "./sounds/time-after-time/tat4.wav",
         padColor: "#368196",
         volume: 1
       },
       {
-        src: "./sounds/loops/lofi/OS_DD2_80_Am_Haze_Keys_Chords.wav",
+        src: "./sounds/time-after-time/tat5.wav",
         padColor: "#205973",
         volume: 1
       },
       {
-        src: "./sounds/loops/lofi/OS_DD2_80_Am_Lofi_Piano_Jamz_Chords.wav",
+        src: "./sounds/time-after-time/tat6.wav",
         padColor: "#0f3441",
         volume: 1
       },
