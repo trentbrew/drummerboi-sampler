@@ -77,41 +77,6 @@ const soundpacks = {
       }
     ]
   },
-  Dubstep: {
-    titleColor: "#d658ab",
-    sounds: [
-      {
-        src: "./sounds/young-girl/sample1.wav",
-        padColor: "#9aafc5",
-        volume: 1
-      },
-      {
-        src: "./sounds/young-girl/sample2.wav",
-        padColor: "#5ec2c7",
-        volume: 1
-      },
-      {
-        src: "./sounds/young-girl/sample3.wav",
-        padColor: "#ab567f",
-        volume: 1
-      },
-      {
-        src: "./sounds/young-girl/sample4.wav",
-        padColor: "#882d4a",
-        volume: 1
-      },
-      {
-        src: "./sounds/young-girl/sample5.wav",
-        padColor: "#c8bf62",
-        volume: 1
-      },
-      {
-        src: "./sounds/young-girl/sample6.wav",
-        padColor: "#d0dcde",
-        volume: 1
-      }
-    ]
-  },
   Funky: {
     titleColor: "#9aafc5",
     sounds: [
@@ -557,6 +522,7 @@ function playSound(index) {
 }
 
 function pianoKey(index) {
+
   playSound(index);
   cycleImage();
 }
