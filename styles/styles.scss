@@ -251,15 +251,15 @@ header p {
 @keyframes padIntro {
   from {
     height: 0%;
-    span {
+    /*span {
       opacity: 0;
-    }
+    }*/
   }
   to {
     height: 100%;
-    span {
+    /*span {
       opacity: 1;
-    }
+    }*/
   }
 }
 
@@ -338,6 +338,7 @@ header p {
   left: 50%;
   transform: translate(-50%, -50%);
   animation: fill 1s ease forwards 4.5s;
+  z-index: 999999;
   //animation: shiftLogo 1s ease forwards 4s; 
 }
 

@@ -395,15 +395,16 @@ var playing = 10;
 var currentPack = 1;
 
 function handleLoopClick(num) {
+  console.log('playing loop', num);
+  console.log('looping through pack...');
   for(let i = 0; i < loops.length; i++) {
-    
+    console.log('pack:', i);
     loops[i].style.animation = "none";
     loops[i].style.opacity = 1;
     if(i >= 7) {
       loops[i].style.opacity = 0.4;
     }
     loops[i].style.backgroundImage = "url('.//res/baseline-play_circle_outline-24px.svg')";
-
     if(i == num) {  
       document.getElementById("loop" + i).play();
     }
