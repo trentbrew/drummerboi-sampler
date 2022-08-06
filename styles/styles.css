@@ -18,7 +18,8 @@ body {
 .loop-button-container {
   position: absolute;
   right: 0px;
-  margin: 40px;
+  margin-right: 36px;
+  top: 72px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   z-index: 20;
@@ -802,9 +803,6 @@ ul li:nth-child(7) {
   .menu-container {
     padding: 20px;
   }
-  .loop-button-container {
-    margin: 20px;
-  }
   .loop-button {
     width: 35px;
     height: 35px;
@@ -817,4 +815,8 @@ ul li:nth-child(7) {
     -webkit-animation: fill-mobile 1s ease forwards 4.5s;
             animation: fill-mobile 1s ease forwards 4.5s;
   }
+}
+a {
+  text-decoration: none;
+  color: black;
 }/*# sourceMappingURL=styles.css.map */

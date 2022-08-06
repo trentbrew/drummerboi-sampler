@@ -17,9 +17,9 @@ body {
 
 .loop-button-container {
   position: absolute;
-  //background: red;
   right: 0px;
-  margin: 40px;
+  margin-right: 36px;
+  top: 72px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   z-index: 20;
@@ -654,7 +654,7 @@ ul li:nth-child(7) {
   }
 
   .loop-button-container {
-    margin: 20px;
+    //top: 36px !important;
   }
 
   .loop-button {
@@ -670,3 +670,7 @@ ul li:nth-child(7) {
   }
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
